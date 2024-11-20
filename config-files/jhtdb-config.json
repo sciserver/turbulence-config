@@ -1,0 +1,2185 @@
+{
+  "name": "JHTDB",
+  "description": "The original Johns Hopkins Turbulence Database",
+  "variables": [
+    {
+      "code": "d",
+      "name": "Density",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "b",
+      "name": "Magnetic Field",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "p",
+      "name": "Pressure",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "t",
+      "name": "Temperature",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "a",
+      "name": "Vector Potential",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "u",
+      "name": "Velocity",
+      "description": null,
+      "cardinality": 3
+    },
+    {
+      "code": "e",
+      "name": "Energy",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "f",
+      "name": "Force",
+      "description": null,
+      "cardinality": 1
+    },
+    {
+      "code": "o",
+      "name": "Position",
+      "description": null,
+      "cardinality": 3
+    }
+  ],
+  "spatial_operators": [
+    {
+      "code": "f",
+      "name": "Field",
+      "description": null
+    },
+    {
+      "code": "g",
+      "name": "Gradient",
+      "description": null
+    },
+    {
+      "code": "h",
+      "name": "Hessian",
+      "description": null
+    },
+    {
+      "code": "l",
+      "name": "Laplacian",
+      "description": null
+    }
+  ],
+  "spatial_methods": [
+    {
+      "code": "none",
+      "name": "none",
+      "description": null
+    },
+    {
+      "code": "lag4",
+      "name": "lag4",
+      "description": null
+    },
+    {
+      "code": "lag6",
+      "name": "lag6",
+      "description": null
+    },
+    {
+      "code": "lag8",
+      "name": "lag8",
+      "description": null
+    },
+    {
+      "code": "m1q4",
+      "name": "m1q4",
+      "description": null
+    },
+    {
+      "code": "m2q8",
+      "name": "m2q8",
+      "description": null
+    },
+    {
+      "code": "m2q14",
+      "name": "m2q14",
+      "description": null
+    },
+    {
+      "code": "fd4noint",
+      "name": "fd4noint",
+      "description": null
+    },
+    {
+      "code": "fd6noint",
+      "name": "fd6noint",
+      "description": null
+    },
+    {
+      "code": "fd8noint",
+      "name": "fd8noint",
+      "description": null
+    },
+    {
+      "code": "fd4lag4",
+      "name": "fd4lag4",
+      "description": null
+    }
+  ],
+  "temporal_methods": [
+    {
+      "code": "none",
+      "name": "none",
+      "description": null
+    },
+    {
+      "code": "pchip",
+      "name": "pchip",
+      "description": null
+    }
+  ],
+  "datasets": [
+    {
+      "displayname": "Channel",
+      "name": "channel",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "25.9935",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "8pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "-1",
+          "upper": "1",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "3pi",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "o"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Channel 5200",
+      "name": "channel5200",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "11",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "8pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "-1",
+          "upper": "1",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "3pi",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Isotropic 1024 Coarse",
+      "name": "isotropic1024coarse",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "10.056",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "o",
+        "f"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8"
+          ]
+        },
+        {
+          "variable": "f",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        },
+        {
+          "variable": "f",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Isotropic 1024 Fine",
+      "name": "isotropic1024fine",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "0.0198",
+          "n": 100,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1024,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "o",
+        "f"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8"
+          ]
+        },
+        {
+          "variable": "f",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        },
+        {
+          "variable": "f",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Isotropic 4096",
+      "name": "isotropic4096",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "1",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 4096,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 4096,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 4096,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Isotropic 8192",
+      "name": "isotropic8192",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "6",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 8192,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 8192,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 8192,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
+      "name": "sabl2048low",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "20",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0.09765625",
+          "upper": "399.90234375",
+          "n": 1,
+          "isPeriodic": false
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "t",
+        "e"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "t",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "e",
+          "methods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
+      "name": "sabl2048high",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "7.425",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0.09765625",
+          "upper": "399.90234375",
+          "n": 1,
+          "isPeriodic": false
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "t",
+        "e"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "e",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "t",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "e",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Magneto-Hydrodynamic 1024",
+      "name": "mhd1024",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "2.56",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "b",
+        "a",
+        "o",
+        "f"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "b",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "a",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8"
+          ]
+        },
+        {
+          "variable": "f",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "b",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "a",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "b",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "a",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "b",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "a",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "b",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "a",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        },
+        {
+          "variable": "f",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Homogeneous Buoyancy Driven",
+      "name": "mixing",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "40.44",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "d",
+        "o"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "d",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4",
+            "lag6",
+            "lag8"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "d",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "d",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "d",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Rotating Stratified 4096",
+      "name": "rotstrat4096",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "5",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "t"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4",
+            "lag6",
+            "lag8",
+            "m1q4",
+            "m2q8",
+            "m2q14"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "g",
+          "methods": [
+            "m1q4",
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "t",
+          "operator": "h",
+          "methods": [
+            "m2q8",
+            "m2q14",
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd6noint",
+            "fd8noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none"
+          ]
+        },
+        {
+          "variable": "t",
+          "methods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Transitional Boundary Layer",
+      "name": "transition_bl",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "1175.0",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "xlims": {
+          "lower": "30.21850",
+          "upper": "1000.065",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "26.48795",
+          "n": 1,
+          "isPeriodic": false
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "240",
+          "n": 1,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physical_variables": [
+        "u",
+        "p",
+        "o"
+      ],
+      "variable_operator_methods": [
+        {
+          "variable": "u",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "f",
+          "methods": [
+            "none",
+            "lag4"
+          ]
+        },
+        {
+          "variable": "o",
+          "operator": "f",
+          "methods": [
+            "lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "g",
+          "methods": [
+            "fd4noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "g",
+          "methods": [
+            "fd4noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "h",
+          "methods": [
+            "fd4noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "p",
+          "operator": "h",
+          "methods": [
+            "fd4noint",
+            "fd4lag4"
+          ]
+        },
+        {
+          "variable": "u",
+          "operator": "l",
+          "methods": [
+            "fd4noint",
+            "fd4lag4"
+          ]
+        }
+      ],
+      "variable_time_methods": [
+        {
+          "variable": "u",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "p",
+          "methods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "variable": "o",
+          "methods": [
+            "pchip"
+          ]
+        }
+      ]
+    }
+  ]
+}
