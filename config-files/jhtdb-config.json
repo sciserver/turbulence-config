@@ -55,7 +55,12 @@
       "name": "Position",
       "description": null,
       "cardinality": 3
-    }
+    },
+    {
+      "code": "n",
+      "name": "eddyviscosity",
+      "description": null,
+      "cardinality": 1  
   ],
   "spatial_operators": [
     {
