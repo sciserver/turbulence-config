@@ -61,6 +61,7 @@
       "name": "eddyviscosity",
       "description": null,
       "cardinality": 1  
+    }
   ],
   "spatial_operators": [
     {
