@@ -18,6 +18,21 @@
         "value": {
           "title": "Value",
           "type": "string"
+        },
+        "variables": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variables"
         }
       },
       "required": [
