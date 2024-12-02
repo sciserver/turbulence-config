@@ -48,14 +48,29 @@ class Dimension(BaseModel):
     n: int = Field(ge=1)  # number of cells along the dimension
     isPeriodic: Optional[bool] = False
     
+class CoordinateEnum(str, Enum):
+    T = 't'
+    X = 'x'
+    Y = 'y'
+    Z = 'z'
+    
+class VariableDimension(Dimension):
+    '''
+    For some simulations the Dimensions are different for different variables.
+    CHECK For example soil temperature in wind farm simulations is limited to ground layer.
+    '''
+    coordinate: CoordinateEnum
+    variables: List[str]
+    
 class Simulation(BaseModel):
     '''
-    does not yet support description of irregular grids. should add subclasses for that.
+    does not yet support description of irregular grids. Could add subclasses for that.
     '''
     tlims: Dimension
     xlims: Dimension
     ylims: Dimension
     zlims: Dimension
+    variableDimensions: Optional[List[VariableDimension]] = None
 
 class Dataset(BaseModel):
     displayname: str
@@ -117,11 +132,6 @@ class JHTDBServerSide(BaseModel):
 ## client side config
 # Config files that add application specific metadata to the datasets.    
 ########################################################        
-class CoordinateEnum(str, Enum):
-    T = 't'
-    X = 'x'
-    Y = 'y'
-    Z = 'z'
 
 ########################################################        
 ## cutout service config
@@ -132,7 +142,8 @@ class CutoutLimit(BaseModel):
     upper: int
     default_lower: int
     default_upper: int
-    
+    variables: Optional[List[str]] = None
+
 class DatasetCutout(BaseModel):
     datasetName: str
     cutout_variables: List[str]
@@ -147,7 +158,8 @@ class JHTDBCutout(BaseModel):
 ########################################################        
 class CoordinateValue(BaseModel):
     coordinate: CoordinateEnum
-    value: str  # can conain 'pi'
+    value: str  # can contain 'pi' ?
+    variables: Optional[List[str]] = None
 
 class DatasetDefaults(BaseModel):
     datasetName: str
