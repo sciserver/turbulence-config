@@ -40,7 +40,7 @@
     },
     {
       "code": "e",
-      "name": "Energy",
+      "name": "Subgrid-scale Energy",
       "description": null,
       "cardinality": 1
     },
