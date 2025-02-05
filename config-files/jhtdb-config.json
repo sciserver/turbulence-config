@@ -60,7 +60,7 @@
       "code": "n",
       "name": "eddyviscosity",
       "description": null,
-      "cardinality": 1  
+      "cardinality": 1
     }
   ],
   "spatial_operators": [
@@ -186,125 +186,122 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "o"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         }
@@ -341,107 +338,102 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         }
@@ -478,145 +470,144 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
@@ -654,145 +645,144 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
@@ -830,62 +820,57 @@
       },
       "description": null,
       "physical_variables": [
-        "u"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         }
@@ -922,99 +907,94 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         }
@@ -1051,177 +1031,172 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "t",
-        "e"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "e",
-          "methods": [
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         }
@@ -1258,180 +1233,175 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "t",
-        "e"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "e",
-          "methods": [
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
@@ -1469,257 +1439,254 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "b",
-        "a",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "b",
-          "methods": [
+          "code": "b",
+          "name": "Magnetic Field",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "a",
-          "methods": [
+          "code": "a",
+          "name": "Vector Potential",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
@@ -1757,171 +1724,168 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "d",
-        "o"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "d",
-          "methods": [
+          "code": "d",
+          "name": "Density",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         }
@@ -1958,107 +1922,102 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "t"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8",
+                "m2q14"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "m2q14",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none"
           ]
         }
@@ -2095,93 +2054,90 @@
       },
       "description": null,
       "physical_variables": [
-        "u",
-        "p",
-        "o"
-      ],
-      "variable_operator_methods": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "grided": false,
+          "variable_operator_methods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4"
+              ]
+            }
+          ],
+          "variable_time_methods": [
             "pchip"
           ]
         }
