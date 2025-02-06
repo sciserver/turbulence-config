@@ -189,7 +189,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -244,7 +244,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -290,7 +290,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -341,7 +341,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -395,7 +395,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -473,7 +473,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -528,7 +528,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -574,7 +574,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -592,7 +592,7 @@
         {
           "code": "f",
           "name": "Force",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -648,7 +648,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -703,7 +703,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -749,7 +749,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -767,7 +767,7 @@
         {
           "code": "f",
           "name": "Force",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -823,7 +823,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -910,7 +910,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -960,7 +960,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1034,7 +1034,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1083,7 +1083,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1123,7 +1123,7 @@
         {
           "code": "t",
           "name": "Temperature",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1163,7 +1163,7 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1236,7 +1236,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1286,7 +1286,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1327,7 +1327,7 @@
         {
           "code": "t",
           "name": "Temperature",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1368,7 +1368,7 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1442,7 +1442,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1497,7 +1497,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1543,7 +1543,7 @@
         {
           "code": "b",
           "name": "Magnetic Field",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1598,7 +1598,7 @@
         {
           "code": "a",
           "name": "Vector Potential",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1653,7 +1653,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1671,7 +1671,7 @@
         {
           "code": "f",
           "name": "Force",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1727,7 +1727,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1782,7 +1782,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1828,7 +1828,7 @@
         {
           "code": "d",
           "name": "Density",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1874,7 +1874,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1925,7 +1925,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -1979,7 +1979,7 @@
         {
           "code": "t",
           "name": "Temperature",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -2057,7 +2057,7 @@
         {
           "code": "u",
           "name": "Velocity",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -2096,7 +2096,7 @@
         {
           "code": "p",
           "name": "Pressure",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
@@ -2128,7 +2128,7 @@
         {
           "code": "o",
           "name": "Position",
-          "grided": false,
+          "gridded": false,
           "variable_operator_methods": [
             {
               "operator": "f",
