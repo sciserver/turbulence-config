@@ -1,5 +1,15 @@
 {
   "$defs": {
+    "CoordinateEnum": {
+      "enum": [
+        "t",
+        "x",
+        "y",
+        "z"
+      ],
+      "title": "CoordinateEnum",
+      "type": "string"
+    },
     "Dataset": {
       "properties": {
         "displayname": {
@@ -161,7 +171,7 @@
       "type": "object"
     },
     "Simulation": {
-      "description": "does not yet support description of irregular grids. should add subclasses for that.",
+      "description": "does not yet support description of irregular grids. Could add subclasses for that.",
       "properties": {
         "tlims": {
           "$ref": "#/$defs/Dimension"
@@ -174,6 +184,21 @@
         },
         "zlims": {
           "$ref": "#/$defs/Dimension"
+        },
+        "variableDimensions": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/VariableDimension"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variabledimensions"
         }
       },
       "required": [
@@ -183,6 +208,55 @@
         "zlims"
       ],
       "title": "Simulation",
+      "type": "object"
+    },
+    "VariableDimension": {
+      "description": "For some simulations the Dimensions are different for different variables.\nCHECK For example soil temperature in wind farm simulations is limited to ground layer.",
+      "properties": {
+        "lower": {
+          "title": "Lower",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "string"
+        },
+        "n": {
+          "minimum": 1,
+          "title": "N",
+          "type": "integer"
+        },
+        "isPeriodic": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Isperiodic"
+        },
+        "coordinate": {
+          "$ref": "#/$defs/CoordinateEnum"
+        },
+        "variables": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Variables",
+          "type": "array"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "n",
+        "coordinate",
+        "variables"
+      ],
+      "title": "VariableDimension",
       "type": "object"
     },
     "VariableOperatorMethod": {

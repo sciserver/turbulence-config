@@ -17,19 +17,34 @@
         },
         "lower": {
           "title": "Lower",
-          "type": "number"
+          "type": "integer"
         },
         "upper": {
           "title": "Upper",
-          "type": "number"
+          "type": "integer"
         },
         "default_lower": {
           "title": "Default Lower",
-          "type": "number"
+          "type": "integer"
         },
         "default_upper": {
           "title": "Default Upper",
-          "type": "number"
+          "type": "integer"
+        },
+        "variables": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variables"
         }
       },
       "required": [
