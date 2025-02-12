@@ -185,12 +185,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -236,7 +236,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -245,7 +245,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -282,7 +282,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -291,7 +291,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -301,7 +301,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         }
@@ -337,12 +337,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -388,7 +388,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -396,7 +396,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -433,7 +433,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         }
@@ -469,12 +469,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -520,7 +520,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -529,7 +529,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -566,7 +566,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -575,7 +575,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -585,7 +585,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         },
@@ -593,7 +593,7 @@
           "code": "f",
           "name": "Force",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -607,7 +607,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -644,12 +644,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -695,7 +695,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -704,7 +704,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -741,7 +741,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -750,7 +750,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -760,7 +760,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         },
@@ -768,7 +768,7 @@
           "code": "f",
           "name": "Force",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -782,7 +782,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -819,12 +819,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -870,7 +870,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         }
@@ -906,12 +906,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -953,7 +953,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -961,7 +961,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -994,7 +994,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         }
@@ -1030,12 +1030,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1076,7 +1076,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -1084,7 +1084,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1116,7 +1116,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -1124,7 +1124,7 @@
           "code": "t",
           "name": "Temperature",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1156,7 +1156,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -1164,7 +1164,7 @@
           "code": "e",
           "name": "Subgrid-scale Energy",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1196,7 +1196,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         }
@@ -1232,12 +1232,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1278,7 +1278,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1287,7 +1287,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1319,7 +1319,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1328,7 +1328,7 @@
           "code": "t",
           "name": "Temperature",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1360,7 +1360,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1369,7 +1369,7 @@
           "code": "e",
           "name": "Subgrid-scale Energy",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1401,7 +1401,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1438,12 +1438,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1489,7 +1489,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1498,7 +1498,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1535,7 +1535,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1544,7 +1544,7 @@
           "code": "b",
           "name": "Magnetic Field",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1590,7 +1590,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1599,7 +1599,7 @@
           "code": "a",
           "name": "Vector Potential",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1645,7 +1645,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1654,7 +1654,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1664,7 +1664,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         },
@@ -1672,7 +1672,7 @@
           "code": "f",
           "name": "Force",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1686,7 +1686,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1723,12 +1723,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1774,7 +1774,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1783,7 +1783,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1820,7 +1820,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1829,7 +1829,7 @@
           "code": "d",
           "name": "Density",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1866,7 +1866,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1875,7 +1875,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1885,7 +1885,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         }
@@ -1921,12 +1921,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -1972,7 +1972,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         },
@@ -1980,7 +1980,7 @@
           "code": "t",
           "name": "Temperature",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -2017,7 +2017,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none"
           ]
         }
@@ -2053,12 +2053,12 @@
         }
       },
       "description": null,
-      "physical_variables": [
+      "physicalVariables": [
         {
           "code": "u",
           "name": "Velocity",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -2088,7 +2088,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -2097,7 +2097,7 @@
           "code": "p",
           "name": "Pressure",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -2120,7 +2120,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -2129,7 +2129,7 @@
           "code": "o",
           "name": "Position",
           "gridded": false,
-          "variable_operator_methods": [
+          "spatialOperatorMethods": [
             {
               "operator": "f",
               "methods": [
@@ -2137,7 +2137,7 @@
               ]
             }
           ],
-          "variable_time_methods": [
+          "temporalMethods": [
             "pchip"
           ]
         }
