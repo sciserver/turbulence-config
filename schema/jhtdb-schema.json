@@ -25,25 +25,11 @@
           "default": null,
           "title": "Description"
         },
-        "physical_variables": {
+        "physicalVariables": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/PhysicalVariable"
           },
-          "title": "Physical Variables",
-          "type": "array"
-        },
-        "variable_operator_methods": {
-          "items": {
-            "$ref": "#/$defs/VariableOperatorMethod"
-          },
-          "title": "Variable Operator Methods",
-          "type": "array"
-        },
-        "variable_time_methods": {
-          "items": {
-            "$ref": "#/$defs/VariableTimeMethod"
-          },
-          "title": "Variable Time Methods",
+          "title": "Physicalvariables",
           "type": "array"
         }
       },
@@ -51,9 +37,7 @@
         "displayname",
         "name",
         "simulation",
-        "physical_variables",
-        "variable_operator_methods",
-        "variable_time_methods"
+        "physicalVariables"
       ],
       "title": "Dataset",
       "type": "object"
@@ -69,9 +53,20 @@
           "type": "string"
         },
         "n": {
-          "minimum": 1,
           "title": "N",
           "type": "integer"
+        },
+        "discrete": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Discrete"
         },
         "isPeriodic": {
           "anyOf": [
@@ -84,6 +79,44 @@
           ],
           "default": false,
           "title": "Isperiodic"
+        },
+        "timeIndexShift": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TimeIndexShift"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "spacing": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Spacing"
+        },
+        "chunk": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunk"
         }
       },
       "required": [
@@ -95,7 +128,7 @@
       "type": "object"
     },
     "Feature": {
-      "description": "general triple basically, used for listing the various featues (methods, operators etc) that are\navailable on a Dataset.\nThe code is to be used as identifier and references to a Feature in a certain collection.",
+      "description": "general quadruple basically, used for listing the various featues (methods, operators etc) that are\navailable on a Dataset.\nthe code is to be used as identifier and references to a Feature in a certain collection.",
       "properties": {
         "code": {
           "title": "Code",
@@ -104,6 +137,18 @@
         "name": {
           "title": "Name",
           "type": "string"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
         },
         "description": {
           "anyOf": [
@@ -125,6 +170,35 @@
       "title": "Feature",
       "type": "object"
     },
+    "Offset": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "grid": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Grid",
+          "type": "array"
+        },
+        "coordinate": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Coordinate",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "grid",
+        "coordinate"
+      ],
+      "title": "Offset",
+      "type": "object"
+    },
     "PhysicalVariable": {
       "properties": {
         "code": {
@@ -135,33 +209,44 @@
           "title": "Name",
           "type": "string"
         },
-        "description": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Description"
+        "gridded": {
+          "title": "Gridded",
+          "type": "boolean"
         },
-        "cardinality": {
-          "default": 1,
-          "title": "Cardinality",
-          "type": "integer"
+        "offsets": {
+          "items": {
+            "$ref": "#/$defs/Offset"
+          },
+          "title": "Offsets",
+          "type": "array"
+        },
+        "spatialOperatorMethods": {
+          "items": {
+            "$ref": "#/$defs/VariableOperatorMethod"
+          },
+          "title": "Spatialoperatormethods",
+          "type": "array"
+        },
+        "temporalMethods": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Temporalmethods",
+          "type": "array"
         }
       },
       "required": [
         "code",
-        "name"
+        "name",
+        "gridded",
+        "offsets",
+        "spatialOperatorMethods",
+        "temporalMethods"
       ],
       "title": "PhysicalVariable",
       "type": "object"
     },
     "Simulation": {
-      "description": "does not yet support description of irregular grids. should add subclasses for that.",
       "properties": {
         "tlims": {
           "$ref": "#/$defs/Dimension"
@@ -185,13 +270,82 @@
       "title": "Simulation",
       "type": "object"
     },
-    "VariableOperatorMethod": {
-      "description": "Which spatial interpolation methods can be applied to the result of which operator applied to which variable.\nAll represented by their codes pointing to the variables/operators/interpolation_methods in the database definition.",
+    "TimeIndexShift": {
       "properties": {
-        "variable": {
-          "title": "Variable",
+        "getcutout": {
+          "title": "Getcutout",
+          "type": "integer"
+        },
+        "getdata": {
+          "title": "Getdata",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "getcutout",
+        "getdata"
+      ],
+      "title": "TimeIndexShift",
+      "type": "object"
+    },
+    "Variable": {
+      "properties": {
+        "code": {
+          "title": "Code",
           "type": "string"
         },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "component_codes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Component Codes",
+          "type": "array"
+        },
+        "cardinality": {
+          "title": "Cardinality",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "component_codes",
+        "cardinality"
+      ],
+      "title": "Variable",
+      "type": "object"
+    },
+    "VariableOperatorMethod": {
+      "description": "which spatial interpolation methods can be applied to the result of which operator applied to which variable.\nall represented by their codes pointing to the variables/operators/interpolation_methods in the database definition.",
+      "properties": {
         "operator": {
           "title": "Operator",
           "type": "string"
@@ -205,33 +359,10 @@
         }
       },
       "required": [
-        "variable",
         "operator",
         "methods"
       ],
       "title": "VariableOperatorMethod",
-      "type": "object"
-    },
-    "VariableTimeMethod": {
-      "description": "Which temporal interpolation methods can be applied to which variable.\nAll represented by their codes pointing to the variables/operators/interpolation_methods in the database definition.",
-      "properties": {
-        "variable": {
-          "title": "Variable",
-          "type": "string"
-        },
-        "methods": {
-          "items": {
-            "type": "string"
-          },
-          "title": "Methods",
-          "type": "array"
-        }
-      },
-      "required": [
-        "variable",
-        "methods"
-      ],
-      "title": "VariableTimeMethod",
       "type": "object"
     }
   },
@@ -254,7 +385,7 @@
     },
     "variables": {
       "items": {
-        "$ref": "#/$defs/PhysicalVariable"
+        "$ref": "#/$defs/Variable"
       },
       "title": "Variables",
       "type": "array"
