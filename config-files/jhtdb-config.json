@@ -5,83 +5,99 @@
     {
       "code": "d",
       "name": "Density",
+      "id": "density",
+      "component_codes": ["rho"],
       "description": null,
       "cardinality": 1
     },
     {
       "code": "b",
       "name": "Magnetic Field",
+      "id": "magneticfield",
+      "component_codes": ["bx", "by", "bz"],
       "description": null,
-      "cardinality": 1
+      "cardinality": 3
     },
     {
       "code": "p",
       "name": "Pressure",
+      "id": "pressure",
+      "component_codes": ["p"],
       "description": null,
       "cardinality": 1
     },
     {
       "code": "t",
       "name": "Temperature",
+      "id": "temperature",
+      "component_codes": ["t"],
       "description": null,
       "cardinality": 1
     },
     {
       "code": "a",
       "name": "Vector Potential",
+      "id": "vectorpotential",
+      "component_codes": ["ax", "ay", "az"],
       "description": null,
-      "cardinality": 1
+      "cardinality": 3
     },
     {
       "code": "u",
       "name": "Velocity",
+      "id": "velocity",
+      "component_codes": ["ux", "uy", "uz"],
       "description": null,
       "cardinality": 3
     },
     {
       "code": "e",
       "name": "Subgrid-scale Energy",
+      "id": "sgsenergy",
+      "component_codes": ["e"],
       "description": null,
       "cardinality": 1
     },
     {
       "code": "f",
       "name": "Force",
+      "id": "force",
+      "component_codes": ["fx", "fy", "fz"],
       "description": null,
       "cardinality": 1
     },
     {
       "code": "o",
       "name": "Position",
+      "id": "position",
+      "component_codes": ["x", "y", "z"],
       "description": null,
       "cardinality": 3
-    },
-    {
-      "code": "n",
-      "name": "eddyviscosity",
-      "description": null,
-      "cardinality": 1  
     }
   ],
   "spatial_operators": [
     {
       "code": "f",
       "name": "Field",
+      "id": "field",
       "description": null
     },
     {
       "code": "g",
       "name": "Gradient",
+      "id": "gradient",
       "description": null
     },
     {
       "code": "h",
       "name": "Hessian",
+      "id": "hessian",
       "description": null
     },
     {
       "code": "l",
       "name": "Laplacian",
+      "id": "laplacian",
       "description": null
     }
   ],
@@ -114,11 +130,6 @@
     {
       "code": "m2q8",
       "name": "m2q8",
-      "description": null
-    },
-    {
-      "code": "m2q14",
-      "name": "m2q14",
       "description": null
     },
     {
@@ -162,149 +173,196 @@
         "tlims": {
           "lower": "0",
           "upper": "25.9935",
-          "n": 1,
-          "isPeriodic": false
+          "n": 4000,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "8pi",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.01227184630308513,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "-1",
           "upper": "1",
-          "n": 1,
+          "n": 512,
+          "spacing": "irregular channel dy",
+          "chunk": 64,
           "isPeriodic": false
         },
         "zlims": {
           "lower": "0",
           "upper": "3pi",
-          "n": 1,
+          "n": 1536,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "o"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         }
@@ -317,131 +375,161 @@
         "tlims": {
           "lower": "1",
           "upper": "11",
-          "n": 1,
-          "isPeriodic": false
+          "n": 11,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "8pi",
-          "n": 1,
+          "n": 10240,
+          "spacing": 0.002454369260617026,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "-1",
           "upper": "1",
-          "n": 1,
+          "n": 1536,
+          "spacing": "irregular channel5200 dy",
+          "chunk": 64,
           "isPeriodic": false
         },
         "zlims": {
           "lower": "0",
           "upper": "3pi",
-          "n": 1,
+          "n": 7680,
+          "spacing": 0.001227184630308513,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         }
@@ -454,169 +542,232 @@
         "tlims": {
           "lower": "0",
           "upper": "10.056",
-          "n": 1,
-          "isPeriodic": false
+          "n": 5024,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -631,168 +782,231 @@
           "lower": "0",
           "upper": "0.0198",
           "n": 100,
-          "isPeriodic": false
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -807,85 +1021,103 @@
           "lower": "1",
           "upper": "1",
           "n": 1,
-          "isPeriodic": false
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
           "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         }
@@ -898,123 +1130,324 @@
         "tlims": {
           "lower": "1",
           "upper": "6",
-          "n": 1,
-          "isPeriodic": false
+          "n": 6,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 8192,
+          "spacing": 0.0007669903939428206,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
           "n": 8192,
+          "spacing": 0.0007669903939428206,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
           "n": 8192,
+          "spacing": 0.0007669903939428206,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Isotropic 32768",
+      "name": "isotropic32768",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "1",
+          "n": 1,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 32768,
+          "spacing": 0.00019174759848570515,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 32768,
+          "spacing": 0.00019174759848570515,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2pi",
+          "n": 32768,
+          "spacing": 0.00019174759848570515,
+          "chunk": 64,
+          "isPeriodic": true
+        }
+      },
+      "description": null,
+      "physicalVariables": [
+        {
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        },
+        {
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         }
@@ -1027,201 +1460,280 @@
         "tlims": {
           "lower": "1",
           "upper": "20",
-          "n": 1,
-          "isPeriodic": false
+          "n": 20,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "400",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "400",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0.09765625",
           "upper": "399.90234375",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": false
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "t",
-        "e"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity_uv",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            },
+            {
+              "name": "velocity_w",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "e",
-          "methods": [
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "sgsenergy",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         }
@@ -1234,204 +1746,859 @@
         "tlims": {
           "lower": "0",
           "upper": "7.425",
-          "n": 1,
-          "isPeriodic": false
+          "n": 100,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": 0,
+            "getdata": 1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "400",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "400",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0.09765625",
           "upper": "399.90234375",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
           "isPeriodic": false
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "t",
-        "e"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity_uv",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            },
+            {
+              "name": "velocity_w",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
           ]
         },
         {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
           ]
         },
         {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
+          "code": "t",
+          "name": "Temperature",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
           ]
         },
         {
-          "variable": "e",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "e",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "sgsenergy",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
           ]
         }
-      ],
-      "variable_time_methods": [
+      ]
+    },
+    {
+      "displayname": "Strong Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
+      "name": "stsabl2048low",
+      "simulation": {
+        "tlims": {
+          "lower": "1",
+          "upper": "20",
+          "n": 20,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0.09765625",
+          "upper": "399.90234375",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": false
+        }
+      },
+      "description": null,
+      "physicalVariables": [
         {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity_uv",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            },
+            {
+              "name": "velocity_w",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        },
+        {
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        },
+        {
+          "code": "t",
+          "name": "Temperature",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        },
+        {
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "sgsenergy",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none"
+          ]
+        }
+      ]
+    },
+    {
+      "displayname": "Strong Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
+      "name": "stsabl2048high",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "7.425",
+          "n": 100,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": 0,
+            "getdata": 1
+          }
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "400",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": true
+        },
+        "zlims": {
+          "lower": "0.09765625",
+          "upper": "399.90234375",
+          "n": 2048,
+          "spacing": 0.1953125,
+          "chunk": 64,
+          "isPeriodic": false
+        }
+      },
+      "description": null,
+      "physicalVariables": [
+        {
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity_uv",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            },
+            {
+              "name": "velocity_w",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                -0.5
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.09765625
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "e",
-          "methods": [
+          "code": "e",
+          "name": "Subgrid-scale Energy",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "sgsenergy",
+              "grid": [
+                0,
+                0,
+                -1.0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0.1953125
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1445,281 +2612,366 @@
         "tlims": {
           "lower": "0",
           "upper": "2.56",
-          "n": 1,
-          "isPeriodic": false
+          "n": 1025,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "b",
-        "a",
-        "o",
-        "f"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "f",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "b",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "a",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "b",
-          "methods": [
+          "code": "b",
+          "name": "Magnetic Field",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "magneticfield",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "a",
-          "methods": [
+          "code": "a",
+          "name": "Vector Potential",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "vectorpotential",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         },
         {
-          "variable": "f",
-          "methods": [
+          "code": "f",
+          "name": "Force",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
@@ -1733,195 +2985,254 @@
         "tlims": {
           "lower": "0",
           "upper": "40.44",
-          "n": 1,
-          "isPeriodic": false
+          "n": 1012,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 1024,
+          "spacing": 0.006135923151542565,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "d",
-        "o"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4",
-            "lag6",
-            "lag8"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "d",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "d",
-          "methods": [
+          "code": "d",
+          "name": "Density",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "density",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4",
+                "lag6",
+                "lag8"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         }
@@ -1934,131 +3245,161 @@
         "tlims": {
           "lower": "1",
           "upper": "5",
-          "n": 1,
-          "isPeriodic": false
+          "n": 5,
+          "discrete": true,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": -1
+          }
         },
         "xlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         },
         "ylims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         },
         "zlims": {
           "lower": "0",
           "upper": "2pi",
-          "n": 1,
+          "n": 4096,
+          "spacing": 0.0015339807878856412,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "t"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4",
-            "lag6",
-            "lag8",
-            "m1q4",
-            "m2q8",
-            "m2q14"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "g",
-          "methods": [
-            "m1q4",
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "t",
-          "operator": "h",
-          "methods": [
-            "m2q8",
-            "m2q14",
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd6noint",
-            "fd8noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         },
         {
-          "variable": "t",
-          "methods": [
+          "code": "t",
+          "name": "Temperature",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none"
           ]
         }
@@ -2071,117 +3412,170 @@
         "tlims": {
           "lower": "0",
           "upper": "1175.0",
-          "n": 1,
-          "isPeriodic": false
+          "n": 4701,
+          "discrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": -1,
+            "getdata": 0
+          }
         },
         "xlims": {
           "lower": "30.21850",
           "upper": "1000.065",
-          "n": 1,
+          "n": 3320,
+          "spacing": 0.292210466,
+          "chunk": 64,
           "isPeriodic": false
         },
         "ylims": {
           "lower": "0",
           "upper": "26.48795",
-          "n": 1,
+          "n": 224,
+          "spacing": "irregular transition bl dy",
+          "chunk": 64,
           "isPeriodic": false
         },
         "zlims": {
           "lower": "0",
           "upper": "240",
-          "n": 1,
+          "n": 2048,
+          "spacing": 0.117244748,
+          "chunk": 64,
           "isPeriodic": true
         }
       },
       "description": null,
-      "physical_variables": [
-        "u",
-        "p",
-        "o"
-      ],
-      "variable_operator_methods": [
+      "physicalVariables": [
         {
-          "variable": "u",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "f",
-          "methods": [
-            "none",
-            "lag4"
-          ]
-        },
-        {
-          "variable": "o",
-          "operator": "f",
-          "methods": [
-            "lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "g",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "g",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "h",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "p",
-          "operator": "h",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        },
-        {
-          "variable": "u",
-          "operator": "l",
-          "methods": [
-            "fd4noint",
-            "fd4lag4"
-          ]
-        }
-      ],
-      "variable_time_methods": [
-        {
-          "variable": "u",
-          "methods": [
+          "code": "u",
+          "name": "Velocity",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                30.2185,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "p",
-          "methods": [
+          "code": "p",
+          "name": "Pressure",
+          "gridded": true,
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                30.2185,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "fd4noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "none",
             "pchip"
           ]
         },
         {
-          "variable": "o",
-          "methods": [
+          "code": "o",
+          "name": "Position",
+          "gridded": false,
+          "offsets": [
+            {
+              "name": "position",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                30.2185,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
             "pchip"
           ]
         }

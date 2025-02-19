@@ -5,9 +5,6 @@
         "storageType": {
           "const": "ZARR",
           "default": "ZARR",
-          "enum": [
-            "ZARR"
-          ],
           "title": "Storagetype",
           "type": "string"
         },
@@ -67,9 +64,6 @@
         "storageType": {
           "const": "FileDB",
           "default": "FileDB",
-          "enum": [
-            "FileDB"
-          ],
           "title": "Storagetype",
           "type": "string"
         },
@@ -89,9 +83,6 @@
         "storageType": {
           "const": "LegacyDB",
           "default": "LegacyDB",
-          "enum": [
-            "LegacyDB"
-          ],
           "title": "Storagetype",
           "type": "string"
         },
@@ -111,9 +102,6 @@
         "storageType": {
           "const": "TBD",
           "default": "TBD",
-          "enum": [
-            "TBD"
-          ],
           "title": "Storagetype",
           "type": "string"
         }
