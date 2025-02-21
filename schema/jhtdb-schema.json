@@ -56,7 +56,7 @@
           "title": "N",
           "type": "integer"
         },
-        "discrete": {
+        "isDiscrete": {
           "anyOf": [
             {
               "type": "boolean"
@@ -66,19 +66,11 @@
             }
           ],
           "default": null,
-          "title": "Discrete"
+          "title": "Isdiscrete"
         },
         "isPeriodic": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": false,
-          "title": "Isperiodic"
+          "title": "Isperiodic",
+          "type": "boolean"
         },
         "timeIndexShift": {
           "anyOf": [
@@ -122,7 +114,8 @@
       "required": [
         "lower",
         "upper",
-        "n"
+        "n",
+        "isPeriodic"
       ],
       "title": "Dimension",
       "type": "object"
@@ -209,9 +202,18 @@
           "title": "Name",
           "type": "string"
         },
-        "gridded": {
-          "title": "Gridded",
+        "isGridded": {
+          "title": "Isgridded",
           "type": "boolean"
+        },
+        "xlims": {
+          "$ref": "#/$defs/Dimension"
+        },
+        "ylims": {
+          "$ref": "#/$defs/Dimension"
+        },
+        "zlims": {
+          "$ref": "#/$defs/Dimension"
         },
         "offsets": {
           "items": {
@@ -238,7 +240,10 @@
       "required": [
         "code",
         "name",
-        "gridded",
+        "isGridded",
+        "xlims",
+        "ylims",
+        "zlims",
         "offsets",
         "spatialOperatorMethods",
         "temporalMethods"
@@ -250,22 +255,10 @@
       "properties": {
         "tlims": {
           "$ref": "#/$defs/Dimension"
-        },
-        "xlims": {
-          "$ref": "#/$defs/Dimension"
-        },
-        "ylims": {
-          "$ref": "#/$defs/Dimension"
-        },
-        "zlims": {
-          "$ref": "#/$defs/Dimension"
         }
       },
       "required": [
-        "tlims",
-        "xlims",
-        "ylims",
-        "zlims"
+        "tlims"
       ],
       "title": "Simulation",
       "type": "object"

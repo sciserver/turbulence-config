@@ -174,36 +174,12 @@
           "lower": "0",
           "upper": "25.9935",
           "n": 4000,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "8pi",
-          "n": 2048,
-          "spacing": 0.01227184630308513,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "-1",
-          "upper": "1",
-          "n": 512,
-          "spacing": "irregular channel dy",
-          "chunk": 64,
-          "isPeriodic": false
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "3pi",
-          "n": 1536,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -211,7 +187,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "8pi",
+            "n": 2048,
+            "spacing": 0.01227184630308513,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "-1",
+            "upper": "1",
+            "n": 512,
+            "spacing": "irregular channel dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "3pi",
+            "n": 1536,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -278,7 +278,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "8pi",
+            "n": 2048,
+            "spacing": 0.01227184630308513,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "-1",
+            "upper": "1",
+            "n": 512,
+            "spacing": "irregular channel dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "3pi",
+            "n": 1536,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -336,7 +360,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "8pi",
+            "n": 2048,
+            "spacing": 0.01227184630308513,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "-1",
+            "upper": "1",
+            "n": 512,
+            "spacing": "irregular channel dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "3pi",
+            "n": 1536,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
@@ -376,36 +424,12 @@
           "lower": "1",
           "upper": "11",
           "n": 11,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "8pi",
-          "n": 10240,
-          "spacing": 0.002454369260617026,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "-1",
-          "upper": "1",
-          "n": 1536,
-          "spacing": "irregular channel5200 dy",
-          "chunk": 64,
-          "isPeriodic": false
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "3pi",
-          "n": 7680,
-          "spacing": 0.001227184630308513,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -413,7 +437,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "8pi",
+            "n": 10240,
+            "spacing": 0.002454369260617026,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "-1",
+            "upper": "1",
+            "n": 1536,
+            "spacing": "irregular channel5200 dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "3pi",
+            "n": 7680,
+            "spacing": 0.001227184630308513,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -479,7 +527,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "8pi",
+            "n": 10240,
+            "spacing": 0.002454369260617026,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "-1",
+            "upper": "1",
+            "n": 1536,
+            "spacing": "irregular channel5200 dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "3pi",
+            "n": 7680,
+            "spacing": 0.001227184630308513,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -543,36 +615,12 @@
           "lower": "0",
           "upper": "10.056",
           "n": 5024,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -580,7 +628,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -647,7 +719,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -705,7 +801,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
@@ -738,7 +858,31 @@
         {
           "code": "f",
           "name": "Force",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "force",
@@ -782,36 +926,12 @@
           "lower": "0",
           "upper": "0.0198",
           "n": 100,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -819,7 +939,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -886,7 +1030,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -944,7 +1112,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
@@ -977,7 +1169,31 @@
         {
           "code": "f",
           "name": "Force",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "force",
@@ -1021,36 +1237,12 @@
           "lower": "1",
           "upper": "1",
           "n": 1,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -1058,7 +1250,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -1131,36 +1347,12 @@
           "lower": "1",
           "upper": "6",
           "n": 6,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 8192,
-          "spacing": 0.0007669903939428206,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 8192,
-          "spacing": 0.0007669903939428206,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 8192,
-          "spacing": 0.0007669903939428206,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -1168,7 +1360,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -1233,7 +1449,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 8192,
+            "spacing": 0.0007669903939428206,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -1296,36 +1536,12 @@
           "lower": "1",
           "upper": "1",
           "n": 1,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 32768,
-          "spacing": 0.00019174759848570515,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 32768,
-          "spacing": 0.00019174759848570515,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 32768,
-          "spacing": 0.00019174759848570515,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -1333,7 +1549,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -1398,7 +1638,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 32768,
+            "spacing": 0.00019174759848570515,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -1461,36 +1725,12 @@
           "lower": "1",
           "upper": "20",
           "n": 20,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0.09765625",
-          "upper": "399.90234375",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": false
         }
       },
       "description": null,
@@ -1498,7 +1738,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "velocity_uv",
@@ -1575,7 +1839,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -1630,7 +1918,31 @@
         {
           "code": "t",
           "name": "Temperature",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "temperature",
@@ -1685,7 +1997,31 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "sgsenergy",
@@ -1747,36 +2083,12 @@
           "lower": "0",
           "upper": "7.425",
           "n": 100,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": 0,
             "getdata": 1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0.09765625",
-          "upper": "399.90234375",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": false
         }
       },
       "description": null,
@@ -1784,7 +2096,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "velocity_uv",
@@ -1862,7 +2198,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -1918,7 +2278,31 @@
         {
           "code": "t",
           "name": "Temperature",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "temperature",
@@ -1974,7 +2358,31 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "sgsenergy",
@@ -2037,36 +2445,12 @@
           "lower": "1",
           "upper": "20",
           "n": 20,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0.09765625",
-          "upper": "399.90234375",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": false
         }
       },
       "description": null,
@@ -2074,7 +2458,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "velocity_uv",
@@ -2151,7 +2559,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -2206,7 +2638,31 @@
         {
           "code": "t",
           "name": "Temperature",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "temperature",
@@ -2261,7 +2717,31 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "sgsenergy",
@@ -2323,36 +2803,12 @@
           "lower": "0",
           "upper": "7.425",
           "n": 100,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": 0,
             "getdata": 1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "400",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0.09765625",
-          "upper": "399.90234375",
-          "n": 2048,
-          "spacing": 0.1953125,
-          "chunk": 64,
-          "isPeriodic": false
         }
       },
       "description": null,
@@ -2360,7 +2816,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "velocity_uv",
@@ -2438,7 +2918,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -2494,7 +2998,31 @@
         {
           "code": "t",
           "name": "Temperature",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "temperature",
@@ -2550,7 +3078,31 @@
         {
           "code": "e",
           "name": "Subgrid-scale Energy",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "400",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0.09765625",
+            "upper": "399.90234375",
+            "n": 2048,
+            "spacing": 0.1953125,
+            "chunk": 64,
+            "isPeriodic": false
+          },
           "offsets": [
             {
               "name": "sgsenergy",
@@ -2613,36 +3165,12 @@
           "lower": "0",
           "upper": "2.56",
           "n": 1025,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -2650,7 +3178,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -2717,7 +3269,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -2775,7 +3351,31 @@
         {
           "code": "b",
           "name": "Magnetic Field",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "magneticfield",
@@ -2842,7 +3442,31 @@
         {
           "code": "a",
           "name": "Vector Potential",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "vectorpotential",
@@ -2909,7 +3533,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
@@ -2942,7 +3590,31 @@
         {
           "code": "f",
           "name": "Force",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "force",
@@ -2986,36 +3658,12 @@
           "lower": "0",
           "upper": "40.44",
           "n": 1012,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 1024,
-          "spacing": 0.006135923151542565,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -3023,7 +3671,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -3090,7 +3762,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -3148,7 +3844,31 @@
         {
           "code": "d",
           "name": "Density",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "density",
@@ -3206,7 +3926,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 1024,
+            "spacing": 0.006135923151542565,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
@@ -3246,36 +3990,12 @@
           "lower": "1",
           "upper": "5",
           "n": 5,
-          "discrete": true,
+          "isDiscrete": true,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": -1
           }
-        },
-        "xlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "2pi",
-          "n": 4096,
-          "spacing": 0.0015339807878856412,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -3283,7 +4003,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -3349,7 +4093,31 @@
         {
           "code": "t",
           "name": "Temperature",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2pi",
+            "n": 4096,
+            "spacing": 0.0015339807878856412,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "temperature",
@@ -3413,36 +4181,12 @@
           "lower": "0",
           "upper": "1175.0",
           "n": 4701,
-          "discrete": false,
+          "isDiscrete": false,
           "isPeriodic": false,
           "timeIndexShift": {
             "getcutout": -1,
             "getdata": 0
           }
-        },
-        "xlims": {
-          "lower": "30.21850",
-          "upper": "1000.065",
-          "n": 3320,
-          "spacing": 0.292210466,
-          "chunk": 64,
-          "isPeriodic": false
-        },
-        "ylims": {
-          "lower": "0",
-          "upper": "26.48795",
-          "n": 224,
-          "spacing": "irregular transition bl dy",
-          "chunk": 64,
-          "isPeriodic": false
-        },
-        "zlims": {
-          "lower": "0",
-          "upper": "240",
-          "n": 2048,
-          "spacing": 0.117244748,
-          "chunk": 64,
-          "isPeriodic": true
         }
       },
       "description": null,
@@ -3450,7 +4194,31 @@
         {
           "code": "u",
           "name": "Velocity",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "30.21850",
+            "upper": "1000.065",
+            "n": 3320,
+            "spacing": 0.292210466,
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "26.48795",
+            "n": 224,
+            "spacing": "irregular transition bl dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "240",
+            "n": 2048,
+            "spacing": 0.117244748,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "velocity",
@@ -3504,7 +4272,31 @@
         {
           "code": "p",
           "name": "Pressure",
-          "gridded": true,
+          "isGridded": true,
+          "xlims": {
+            "lower": "30.21850",
+            "upper": "1000.065",
+            "n": 3320,
+            "spacing": 0.292210466,
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "26.48795",
+            "n": 224,
+            "spacing": "irregular transition bl dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "240",
+            "n": 2048,
+            "spacing": 0.117244748,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "pressure",
@@ -3551,7 +4343,31 @@
         {
           "code": "o",
           "name": "Position",
-          "gridded": false,
+          "isGridded": false,
+          "xlims": {
+            "lower": "30.21850",
+            "upper": "1000.065",
+            "n": 3320,
+            "spacing": 0.292210466,
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "26.48795",
+            "n": 224,
+            "spacing": "irregular transition bl dy",
+            "chunk": 64,
+            "isPeriodic": false
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "240",
+            "n": 2048,
+            "spacing": 0.117244748,
+            "chunk": 64,
+            "isPeriodic": true
+          },
           "offsets": [
             {
               "name": "position",
