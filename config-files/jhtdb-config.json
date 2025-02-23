@@ -1,12 +1,13 @@
 {
   "name": "JHTDB",
   "description": "The original Johns Hopkins Turbulence Database",
+  "pickled_metadata_filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/jhtdb_metadata/jhtdb_pickled",
   "variables": [
     {
       "code": "d",
       "name": "Density",
       "id": "density",
-      "component_codes": ["rho"],
+      "component_codes": ["\u03c1"],
       "description": null,
       "cardinality": 1
     },
@@ -30,7 +31,7 @@
       "code": "t",
       "name": "Temperature",
       "id": "temperature",
-      "component_codes": ["t"],
+      "component_codes": ["\u03b8"],
       "description": null,
       "cardinality": 1
     },
@@ -105,52 +106,92 @@
     {
       "code": "none",
       "name": "none",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        0,
+        1
+      ]
     },
     {
       "code": "lag4",
       "name": "lag4",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        1,
+        2
+      ]
     },
     {
       "code": "lag6",
       "name": "lag6",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        2,
+        3
+      ]
     },
     {
       "code": "lag8",
       "name": "lag8",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        3,
+        4
+      ]
     },
     {
       "code": "m1q4",
       "name": "m1q4",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        1,
+        2
+      ]
     },
     {
       "code": "m2q8",
       "name": "m2q8",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        3,
+        4
+      ]
     },
     {
       "code": "fd4noint",
       "name": "fd4noint",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        2,
+        3
+      ]
     },
     {
       "code": "fd6noint",
       "name": "fd6noint",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        3,
+        4
+      ]
     },
     {
       "code": "fd8noint",
       "name": "fd8noint",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        4,
+        5
+      ]
     },
     {
       "code": "fd4lag4",
       "name": "fd4lag4",
-      "description": null
+      "description": null,
+      "bucketMinMax": [
+        3,
+        4
+      ]
     }
   ],
   "temporal_methods": [
@@ -169,6 +210,8 @@
     {
       "displayname": "Channel",
       "name": "channel",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/channel/channel.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -182,7 +225,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -419,6 +461,8 @@
     {
       "displayname": "Channel 5200",
       "name": "channel5200",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/channel5200/channel5200.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -432,7 +476,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -610,6 +653,8 @@
     {
       "displayname": "Isotropic 1024 Coarse",
       "name": "isotropic1024coarse",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic1024coarse/isotropic1024coarse.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -623,7 +668,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -921,6 +965,8 @@
     {
       "displayname": "Isotropic 1024 Fine",
       "name": "isotropic1024fine",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic1024fine/isotropic1024fine.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -934,7 +980,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -1232,6 +1277,8 @@
     {
       "displayname": "Isotropic 4096",
       "name": "isotropic4096",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic4096/isotropic4096.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -1245,7 +1292,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -1342,6 +1388,8 @@
     {
       "displayname": "Isotropic 8192",
       "name": "isotropic8192",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic8192/isotropic8192.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -1355,7 +1403,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -1531,6 +1578,8 @@
     {
       "displayname": "Isotropic 32768",
       "name": "isotropic32768",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic32768/isotropic32768.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -1544,7 +1593,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -1720,6 +1768,8 @@
     {
       "displayname": "Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
       "name": "sabl2048low",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/sabl2048low/sabl2048low.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -1733,7 +1783,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -2078,6 +2127,8 @@
     {
       "displayname": "Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
       "name": "sabl2048high",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/sabl2048high/sabl2048high.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -2091,7 +2142,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -2440,6 +2490,8 @@
     {
       "displayname": "Strong Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
       "name": "stsabl2048low",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/stsabl2048low/stsabl2048low.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -2453,7 +2505,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -2798,6 +2849,8 @@
     {
       "displayname": "Strong Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
       "name": "stsabl2048high",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/stsabl2048high/stsabl2048high.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -2811,7 +2864,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -3160,6 +3212,8 @@
     {
       "displayname": "Magneto-Hydrodynamic 1024",
       "name": "mhd1024",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/mhd1024/mhd1024.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -3173,7 +3227,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -3653,6 +3706,8 @@
     {
       "displayname": "Homogeneous Buoyancy Driven",
       "name": "mixing",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/mixing/mixing.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -3666,7 +3721,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -3985,6 +4039,8 @@
     {
       "displayname": "Rotating Stratified 4096",
       "name": "rotstrat4096",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/rotstrat4096/rotstrat4096.zarr",
       "simulation": {
         "tlims": {
           "lower": "1",
@@ -3998,7 +4054,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
@@ -4176,6 +4231,8 @@
     {
       "displayname": "Transitional Boundary Layer",
       "name": "transition_bl",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/transition_bl/transition_bl.zarr",
       "simulation": {
         "tlims": {
           "lower": "0",
@@ -4189,7 +4246,6 @@
           }
         }
       },
-      "description": null,
       "physicalVariables": [
         {
           "code": "u",
