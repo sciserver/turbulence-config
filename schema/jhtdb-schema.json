@@ -10,9 +10,6 @@
           "title": "Name",
           "type": "string"
         },
-        "simulation": {
-          "$ref": "#/$defs/Simulation"
-        },
         "description": {
           "anyOf": [
             {
@@ -25,6 +22,13 @@
           "default": null,
           "title": "Description"
         },
+        "filepath": {
+          "title": "Filepath",
+          "type": "string"
+        },
+        "simulation": {
+          "$ref": "#/$defs/Simulation"
+        },
         "physicalVariables": {
           "items": {
             "$ref": "#/$defs/PhysicalVariable"
@@ -36,6 +40,7 @@
       "required": [
         "displayname",
         "name",
+        "filepath",
         "simulation",
         "physicalVariables"
       ],
@@ -154,6 +159,21 @@
           ],
           "default": null,
           "title": "Description"
+        },
+        "bucketMinmax": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bucketminmax"
         }
       },
       "required": [
@@ -315,6 +335,21 @@
           "default": null,
           "title": "Description"
         },
+        "bucketMinmax": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bucketminmax"
+        },
         "component_codes": {
           "items": {
             "type": "string"
@@ -376,6 +411,10 @@
       "default": null,
       "title": "Description"
     },
+    "pickled_metadata_filepath": {
+      "title": "Pickled Metadata Filepath",
+      "type": "string"
+    },
     "variables": {
       "items": {
         "$ref": "#/$defs/Variable"
@@ -414,6 +453,7 @@
   },
   "required": [
     "name",
+    "pickled_metadata_filepath",
     "variables",
     "spatial_operators",
     "spatial_methods",
