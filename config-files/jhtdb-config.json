@@ -946,12 +946,7 @@
             {
               "operator": "f",
               "methods": [
-                "none",
-                "lag4",
-                "lag6",
-                "lag8",
-                "m1q4",
-                "m2q8"
+                "none"
               ]
             }
           ],
@@ -1258,12 +1253,7 @@
             {
               "operator": "f",
               "methods": [
-                "none",
-                "lag4",
-                "lag6",
-                "lag8",
-                "m1q4",
-                "m2q8"
+                "none"
               ]
             }
           ],
@@ -3687,12 +3677,7 @@
             {
               "operator": "f",
               "methods": [
-                "none",
-                "lag4",
-                "lag6",
-                "lag8",
-                "m1q4",
-                "m2q8"
+                "none"
               ]
             }
           ],
