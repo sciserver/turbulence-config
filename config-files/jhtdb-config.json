@@ -4482,7 +4482,7 @@
             "upper": "12862.5",
             "n": 351,
             "spacing": 36.75,
-            "chunk": 64,
+            "chunk": 39,
             "isPeriodic": false
           },
           "ylims": {
@@ -4490,7 +4490,7 @@
             "upper": "1260",
             "n": 72,
             "spacing": 17.5,
-            "chunk": 64,
+            "chunk": 72,
             "isPeriodic": true
           },
           "zlims": {
@@ -4498,7 +4498,7 @@
             "upper": "2395",
             "n": 480,
             "spacing": 5.0,
-            "chunk": 64,
+            "chunk": 80,
             "isPeriodic": false
           },
           "offsets": [
@@ -4572,7 +4572,7 @@
             "upper": "12862.5",
             "n": 351,
             "spacing": 36.75,
-            "chunk": 64,
+            "chunk": 39,
             "isPeriodic": false
           },
           "ylims": {
@@ -4580,7 +4580,7 @@
             "upper": "1260",
             "n": 72,
             "spacing": 17.5,
-            "chunk": 64,
+            "chunk": 72,
             "isPeriodic": true
           },
           "zlims": {
@@ -4588,7 +4588,7 @@
             "upper": "2395",
             "n": 480,
             "spacing": 5.0,
-            "chunk": 64,
+            "chunk": 80,
             "isPeriodic": false
           },
           "offsets": [
@@ -4653,7 +4653,7 @@
             "upper": "12862.5",
             "n": 351,
             "spacing": 36.75,
-            "chunk": 64,
+            "chunk": 39,
             "isPeriodic": false
           },
           "ylims": {
@@ -4661,7 +4661,7 @@
             "upper": "1260",
             "n": 72,
             "spacing": 17.5,
-            "chunk": 64,
+            "chunk": 72,
             "isPeriodic": true
           },
           "zlims": {
@@ -4669,7 +4669,7 @@
             "upper": "2395",
             "n": 480,
             "spacing": 5.0,
-            "chunk": 64,
+            "chunk": 80,
             "isPeriodic": false
           },
           "offsets": [
@@ -4734,7 +4734,7 @@
             "upper": "12862.5",
             "n": 351,
             "spacing": 36.75,
-            "chunk": 64,
+            "chunk": 39,
             "isPeriodic": false
           },
           "ylims": {
@@ -4742,7 +4742,7 @@
             "upper": "1260",
             "n": 72,
             "spacing": 17.5,
-            "chunk": 64,
+            "chunk": 72,
             "isPeriodic": true
           },
           "zlims": {
@@ -4750,7 +4750,7 @@
             "upper": "2395",
             "n": 480,
             "spacing": 5.0,
-            "chunk": 64,
+            "chunk": 80,
             "isPeriodic": false
           },
           "offsets": [
