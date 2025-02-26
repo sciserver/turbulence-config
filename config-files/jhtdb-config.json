@@ -44,7 +44,7 @@
       "cardinality": 1
     },
     {
-      "code": "n",
+      "code": "v",
       "name": "Turbulent Viscosity",
       "id": "turbviscosity",
       "component_codes": ["\u03BD"],
@@ -4726,7 +4726,7 @@
           ]
         },
         {
-          "code": "n",
+          "code": "v",
           "name": "Turbulent Viscosity",
           "isGridded": true,
           "xlims": {
