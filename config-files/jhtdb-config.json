@@ -81,7 +81,7 @@
       "id": "force",
       "component_codes": ["fx", "fy", "fz"],
       "description": null,
-      "cardinality": 1
+      "cardinality": 3
     },
     {
       "code": "o",
