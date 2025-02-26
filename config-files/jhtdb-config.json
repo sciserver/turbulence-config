@@ -4805,6 +4805,96 @@
             "none",
             "pchip"
           ]
+        },
+        {
+          "code": "f",
+          "name": "Force",
+          "isGridded": true,
+          "xlims": {
+            "lower": "7680.75",
+            "upper": "10437",
+            "n": 151,
+            "spacing": 18.375,
+            "chunk": 151,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 144,
+            "spacing": 8.75,
+            "chunk": 144,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "195",
+            "n": 40,
+            "spacing": 5.0,
+            "chunk": 10,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                7680.75,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
         }
       ]
     }
