@@ -4063,6 +4063,450 @@
           ]
         }
       ]
+    },
+    {
+      "displayname": "Diurnal Windfarm",
+      "name": "diurnal_windfarm",
+      "description": null,
+      "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/diurnal_cycle_multitime_new.zarr",
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "86398",
+          "n": 172797,
+          "isDiscrete": false,
+          "isPeriodic": false,
+          "timeIndexShift": {
+            "getcutout": 0,
+            "getdata": 1
+          }
+        }
+      },
+      "physicalVariables": [
+        {
+          "code": "u",
+          "name": "Velocity",
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "12862.5",
+            "n": 351,
+            "spacing": 36.75,
+            "chunk": 39,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 72,
+            "spacing": 17.5,
+            "chunk": 72,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2395",
+            "n": 480,
+            "spacing": 5.0,
+            "chunk": 80,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "p",
+          "name": "Pressure",
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "12862.5",
+            "n": 351,
+            "spacing": 36.75,
+            "chunk": 39,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 72,
+            "spacing": 17.5,
+            "chunk": 72,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2395",
+            "n": 480,
+            "spacing": 5.0,
+            "chunk": 80,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "t",
+          "name": "Temperature",
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "12862.5",
+            "n": 351,
+            "spacing": 36.75,
+            "chunk": 39,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 72,
+            "spacing": 17.5,
+            "chunk": 72,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2395",
+            "n": 480,
+            "spacing": 5.0,
+            "chunk": 80,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "temperature",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "v",
+          "name": "Turbulent Viscosity",
+          "isGridded": true,
+          "xlims": {
+            "lower": "0",
+            "upper": "12862.5",
+            "n": 351,
+            "spacing": 36.75,
+            "chunk": 39,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 72,
+            "spacing": 17.5,
+            "chunk": 72,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "2395",
+            "n": 480,
+            "spacing": 5.0,
+            "chunk": 80,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "turbviscosity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "f",
+          "name": "Force",
+          "isGridded": true,
+          "xlims": {
+            "lower": "7680.75",
+            "upper": "10437",
+            "n": 151,
+            "spacing": 18.375,
+            "chunk": 151,
+            "isPeriodic": false
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 144,
+            "spacing": 8.75,
+            "chunk": 144,
+            "isPeriodic": true
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "195",
+            "n": 40,
+            "spacing": 5.0,
+            "chunk": 10,
+            "isPeriodic": false
+          },
+          "offsets": [
+            {
+              "name": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                7680.75,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "f",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "g",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "h",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "l",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
     }
   ]
 }
