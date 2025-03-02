@@ -1,9 +1,10 @@
 {
   "$defs": {
     "Dataset": {
+      "description": "dataset general settings.",
       "properties": {
-        "displayname": {
-          "title": "Displayname",
+        "code": {
+          "title": "Code",
           "type": "string"
         },
         "name": {
@@ -22,9 +23,8 @@
           "default": null,
           "title": "Description"
         },
-        "filepath": {
-          "title": "Filepath",
-          "type": "string"
+        "storage": {
+          "$ref": "#/$defs/Storage"
         },
         "simulation": {
           "$ref": "#/$defs/Simulation"
@@ -38,95 +38,17 @@
         }
       },
       "required": [
-        "displayname",
+        "code",
         "name",
-        "filepath",
+        "storage",
         "simulation",
         "physicalVariables"
       ],
       "title": "Dataset",
       "type": "object"
     },
-    "Dimension": {
-      "properties": {
-        "lower": {
-          "title": "Lower",
-          "type": "string"
-        },
-        "upper": {
-          "title": "Upper",
-          "type": "string"
-        },
-        "n": {
-          "title": "N",
-          "type": "integer"
-        },
-        "isDiscrete": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Isdiscrete"
-        },
-        "isPeriodic": {
-          "title": "Isperiodic",
-          "type": "boolean"
-        },
-        "timeIndexShift": {
-          "anyOf": [
-            {
-              "$ref": "#/$defs/TimeIndexShift"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null
-        },
-        "spacing": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Spacing"
-        },
-        "chunk": {
-          "anyOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Chunk"
-        }
-      },
-      "required": [
-        "lower",
-        "upper",
-        "n",
-        "isPeriodic"
-      ],
-      "title": "Dimension",
-      "type": "object"
-    },
     "Feature": {
-      "description": "general quadruple basically, used for listing the various featues (methods, operators etc) that are\navailable on a Dataset.\nthe code is to be used as identifier and references to a Feature in a certain collection.",
+      "description": "general triple basically, used for listing the various featues (methods, operators etc) that are\navailable on a Dataset. the code is to be used as identifier and references to a Feature in a certain collection.",
       "properties": {
         "code": {
           "title": "Code",
@@ -135,18 +57,6 @@
         "name": {
           "title": "Name",
           "type": "string"
-        },
-        "id": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Id"
         },
         "description": {
           "anyOf": [
@@ -159,21 +69,6 @@
           ],
           "default": null,
           "title": "Description"
-        },
-        "bucketMinmax": {
-          "anyOf": [
-            {
-              "items": {
-                "type": "integer"
-              },
-              "type": "array"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Bucketminmax"
         }
       },
       "required": [
@@ -184,9 +79,10 @@
       "type": "object"
     },
     "Offset": {
+      "description": "offset general settings.",
       "properties": {
-        "name": {
-          "title": "Name",
+        "code": {
+          "title": "Code",
           "type": "string"
         },
         "grid": {
@@ -205,7 +101,7 @@
         }
       },
       "required": [
-        "name",
+        "code",
         "grid",
         "coordinate"
       ],
@@ -213,6 +109,7 @@
       "type": "object"
     },
     "PhysicalVariable": {
+      "description": "physical variable specific settings.",
       "properties": {
         "code": {
           "title": "Code",
@@ -222,18 +119,65 @@
           "title": "Name",
           "type": "string"
         },
-        "isGridded": {
-          "title": "Isgridded",
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "isPersistent": {
+          "title": "Ispersistent",
           "type": "boolean"
         },
+        "storage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Storage"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "xlims": {
-          "$ref": "#/$defs/Dimension"
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SpaceDimension"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "ylims": {
-          "$ref": "#/$defs/Dimension"
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SpaceDimension"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "zlims": {
-          "$ref": "#/$defs/Dimension"
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SpaceDimension"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "offsets": {
           "items": {
@@ -260,10 +204,7 @@
       "required": [
         "code",
         "name",
-        "isGridded",
-        "xlims",
-        "ylims",
-        "zlims",
+        "isPersistent",
         "offsets",
         "spatialOperatorMethods",
         "temporalMethods"
@@ -272,18 +213,172 @@
       "type": "object"
     },
     "Simulation": {
+      "description": "simulation general settings.",
       "properties": {
         "tlims": {
-          "$ref": "#/$defs/Dimension"
+          "$ref": "#/$defs/TimeDimension"
+        },
+        "xlims": {
+          "$ref": "#/$defs/SpaceDimension"
+        },
+        "ylims": {
+          "$ref": "#/$defs/SpaceDimension"
+        },
+        "zlims": {
+          "$ref": "#/$defs/SpaceDimension"
         }
       },
       "required": [
-        "tlims"
+        "tlims",
+        "xlims",
+        "ylims",
+        "zlims"
       ],
       "title": "Simulation",
       "type": "object"
     },
+    "SpaceDimension": {
+      "description": "space dimension specific settings.",
+      "properties": {
+        "lower": {
+          "title": "Lower",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "string"
+        },
+        "n": {
+          "title": "N",
+          "type": "integer"
+        },
+        "isPeriodic": {
+          "title": "Isperiodic",
+          "type": "boolean"
+        },
+        "spacing": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Spacing"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "n",
+        "isPeriodic",
+        "spacing"
+      ],
+      "title": "SpaceDimension",
+      "type": "object"
+    },
+    "SpatialMethod": {
+      "description": "spatial interpolation method specific settings.",
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "bucketIndices": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Bucketindices",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "bucketIndices"
+      ],
+      "title": "SpatialMethod",
+      "type": "object"
+    },
+    "Storage": {
+      "description": "storage general settings.",
+      "properties": {
+        "filepath": {
+          "title": "Filepath",
+          "type": "string"
+        },
+        "chunks": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Chunks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "filepath",
+        "chunks"
+      ],
+      "title": "Storage",
+      "type": "object"
+    },
+    "TimeDimension": {
+      "description": "time dimension specific settings.",
+      "properties": {
+        "lower": {
+          "title": "Lower",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "string"
+        },
+        "n": {
+          "title": "N",
+          "type": "integer"
+        },
+        "isPeriodic": {
+          "title": "Isperiodic",
+          "type": "boolean"
+        },
+        "isDiscrete": {
+          "title": "Isdiscrete",
+          "type": "boolean"
+        },
+        "timeIndexShift": {
+          "$ref": "#/$defs/TimeIndexShift"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "n",
+        "isPeriodic",
+        "isDiscrete",
+        "timeIndexShift"
+      ],
+      "title": "TimeDimension",
+      "type": "object"
+    },
     "TimeIndexShift": {
+      "description": "specifies how the user-specified time is shifted based on the query type to read from correct zarr\ntime index. pchip interpolation requires a precursor time that is not queryable.",
       "properties": {
         "getcutout": {
           "title": "Getcutout",
@@ -302,6 +397,7 @@
       "type": "object"
     },
     "Variable": {
+      "description": "variable specific settings.",
       "properties": {
         "code": {
           "title": "Code",
@@ -310,18 +406,6 @@
         "name": {
           "title": "Name",
           "type": "string"
-        },
-        "id": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Id"
         },
         "description": {
           "anyOf": [
@@ -334,21 +418,6 @@
           ],
           "default": null,
           "title": "Description"
-        },
-        "bucketMinmax": {
-          "anyOf": [
-            {
-              "items": {
-                "type": "integer"
-              },
-              "type": "array"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Bucketminmax"
         },
         "component_codes": {
           "items": {
@@ -372,7 +441,7 @@
       "type": "object"
     },
     "VariableOperatorMethod": {
-      "description": "which spatial interpolation methods can be applied to the result of which operator applied to which variable.\nall represented by their codes pointing to the variables/operators/interpolation_methods in the database definition.",
+      "description": "which spatial interpolation methods can be applied to the result of which operator applied to which variable.\nall represented by their codes pointing to the variables/operators/spatial methods in the database definition.",
       "properties": {
         "operator": {
           "title": "Operator",
@@ -394,6 +463,7 @@
       "type": "object"
     }
   },
+  "description": "database general settings.",
   "properties": {
     "name": {
       "title": "Name",
@@ -431,7 +501,7 @@
     },
     "spatial_methods": {
       "items": {
-        "$ref": "#/$defs/Feature"
+        "$ref": "#/$defs/SpatialMethod"
       },
       "title": "Spatial Methods",
       "type": "array"
