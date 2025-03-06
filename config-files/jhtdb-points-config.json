@@ -1,5 +1,5 @@
 {
-  "jhtdbConfigFileURL": "file:///home/idies/workspace/turbulence-ceph-staging/schema_files/jhtdb-config.json",
+  "jhtdbConfigFileURL": "https://raw.githubusercontent.com/sciserver/turbulence-config/refs/heads/main/config-files/jhtdb-config.json",
   "datasets": [
     {
       "datasetName": "channel",
@@ -140,6 +140,27 @@
       ]
     },
     {
+      "datasetName": "isotropic32768",
+      "default_coordinates": [
+        {
+          "coordinate": "t",
+          "value": 1.0
+        },
+        {
+          "coordinate": "x",
+          "value": 3.14
+        },
+        {
+          "coordinate": "y",
+          "value": 3.14
+        },
+        {
+          "coordinate": "z",
+          "value": 3.14
+        }
+      ]
+    },
+    {
       "datasetName": "sabl2048low",
       "default_coordinates": [
         {
@@ -162,6 +183,48 @@
     },
     {
       "datasetName": "sabl2048high",
+      "default_coordinates": [
+        {
+          "coordinate": "t",
+          "value": 1.0
+        },
+        {
+          "coordinate": "x",
+          "value": 200.0
+        },
+        {
+          "coordinate": "y",
+          "value": 200.0
+        },
+        {
+          "coordinate": "z",
+          "value": 5.00
+        }
+      ]
+    },
+    {
+      "datasetName": "stsabl2048low",
+      "default_coordinates": [
+        {
+          "coordinate": "t",
+          "value": 1.0
+        },
+        {
+          "coordinate": "x",
+          "value": 200.0
+        },
+        {
+          "coordinate": "y",
+          "value": 200.0
+        },
+        {
+          "coordinate": "z",
+          "value": 5.00
+        }
+      ]
+    },
+    {
+      "datasetName": "stsabl2048high",
       "default_coordinates": [
         {
           "coordinate": "t",

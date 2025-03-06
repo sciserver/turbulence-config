@@ -17,7 +17,7 @@
         },
         "value": {
           "title": "Value",
-          "type": "string"
+          "type": "number"
         }
       },
       "required": [
@@ -39,6 +39,17 @@
           },
           "title": "Default Coordinates",
           "type": "array"
+        },
+        "position_time_interval": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PositionTimeInterval"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -46,6 +57,24 @@
         "default_coordinates"
       ],
       "title": "DatasetDefaults",
+      "type": "object"
+    },
+    "PositionTimeInterval": {
+      "properties": {
+        "endTime": {
+          "title": "Endtime",
+          "type": "number"
+        },
+        "deltaT": {
+          "title": "Deltat",
+          "type": "number"
+        }
+      },
+      "required": [
+        "endTime",
+        "deltaT"
+      ],
+      "title": "PositionTimeInterval",
       "type": "object"
     }
   },
