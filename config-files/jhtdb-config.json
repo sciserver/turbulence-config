@@ -1,7 +1,7 @@
 {
   "name": "JHTDB",
   "description": "The original Johns Hopkins Turbulence Database",
-  "pickled_metadata_filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/jhtdb_metadata/jhtdb_pickled",
+  "pickled_metadata_filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/jhtdb_metadata/jhtdb_pickled",
   "variables": [
     {
       "code": "pressure",
@@ -1185,7 +1185,7 @@
       "name": "Isotropic 8192",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic8192/isotropic8192.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/isotropic8192/isotropic8192.zarr",
         "chunks": [
           64,
           64,
@@ -1355,7 +1355,7 @@
       "name": "Isotropic 32768",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/isotropic32768/isotropic32768.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/isotropic32768/isotropic32768.zarr",
         "chunks": [
           64,
           64,
@@ -1525,7 +1525,7 @@
       "name": "Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/sabl2048low/sabl2048low.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/sabl2048low/sabl2048low.zarr",
         "chunks": [
           64,
           64,
@@ -1816,7 +1816,7 @@
       "name": "Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/sabl2048high/sabl2048high.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/sabl2048high/sabl2048high.zarr",
         "chunks": [
           64,
           64,
@@ -2111,7 +2111,7 @@
       "name": "Strong Stably Stratified Atmospheric Boundary Layer 2048 low-frequency",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/stsabl2048low/stsabl2048low.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/stsabl2048low/stsabl2048low.zarr",
         "chunks": [
           64,
           64,
@@ -2402,7 +2402,7 @@
       "name": "Strong Stably Stratified Atmospheric Boundary Layer 2048 high-frequency",
       "description": null,
       "storage": {
-        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-turbulence/stsabl2048high/stsabl2048high.zarr",
+        "filepath": "/home/idies/workspace/turbulence-ceph/sciserver-turbulence/stsabl2048high/stsabl2048high.zarr",
         "chunks": [
           64,
           64,
