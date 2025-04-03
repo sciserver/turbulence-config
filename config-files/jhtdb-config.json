@@ -3687,6 +3687,48 @@
       "code": "diurnal_windfarm",
       "name": "Diurnal Windfarm",
       "description": null,
+      "parquet":{
+        "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/turbine-parquet/",
+        "turbine_variables": [
+          "power",
+          "RotSpeed",
+          "thrust",
+          "Yaw"
+        ],
+        "turbine_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "blade_variables": [
+          "xPos",
+          "yPos",
+          "zPos",
+          "uy_LES",
+          "uy_opt",
+          "du",
+          "alpha",
+          "Cl",
+          "Cd",
+          "lift",
+          "drag",
+          "Vrel",
+          "Vaxial",
+          "Vtangential",
+          "axialForce",
+          "tangentialForce"
+        ],
+        "blade_numbers": [
+          1,
+          2,
+          3
+        ]
+      },
       "storage": {
         "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/diurnal_cycle_multitime_new.zarr",
         "chunks": [
