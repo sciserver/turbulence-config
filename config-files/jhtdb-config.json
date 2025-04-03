@@ -3689,6 +3689,9 @@
       "description": null,
       "parquet":{
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/turbine-parquet/",
+        "time_offset": 54000.05,
+        "time_align": 0.45,
+        "time_step": 0.05,
         "turbine_variables": [
           "power",
           "RotSpeed",
