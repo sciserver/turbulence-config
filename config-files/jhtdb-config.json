@@ -3693,9 +3693,9 @@
         "time_align": 0.45,
         "time_step": 0.05,
         "turbine_variables": [
-          "Power",
+          "power",
           "RotSpeed",
-          "Thrust",
+          "thrust",
           "Yaw"
         ],
         "turbine_numbers": [
