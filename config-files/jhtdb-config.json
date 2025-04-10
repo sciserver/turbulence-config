@@ -3690,7 +3690,7 @@
       "parquet":{
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/turbine-parquet/",
         "time_offset": 54000.05,
-        "time_align": 0.45,
+        "time_align": 0.95,
         "time_step": 0.05,
         "turbine_variables": [
           "power",
@@ -4037,6 +4037,445 @@
               151,
               144,
               10
+            ]
+          },
+          "xlims": {
+            "lower": "7680.75",
+            "upper": "10437",
+            "n": 151,
+            "isPeriodic": false,
+            "spacing": 18.375
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 144,
+            "isPeriodic": true,
+            "spacing": 8.75
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "195",
+            "n": 40,
+            "isPeriodic": false,
+            "spacing": 5.0
+          },
+          "offsets": [
+            {
+              "code": "force",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                7680.75,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "gradient",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "hessian",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "laplacian",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "nbl_windfarm",
+      "name": "Neutral Boundary Layer Windfarm",
+      "description": null,
+      "parquet":{
+        "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/turbine-parquet/",
+        "time_offset": 54000.05,
+        "time_align": 0.45,
+        "time_step": 0.05,
+        "turbine_variables": [
+          "power",
+          "RotSpeed",
+          "thrust",
+          "Yaw"
+        ],
+        "turbine_numbers": [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+          11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+          31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+          41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+          51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+        ],
+        "blade_variables": [
+          "xPos",
+          "yPos",
+          "zPos",
+          "uy_LES1",
+          "uy_LES2",
+          "uy_opt1",
+          "uy_opt2",
+          "du1",
+          "du2",
+          "alpha",
+          "Cl",
+          "Cd",
+          "lift",
+          "drag",
+          "Vrel",
+          "Vaxial",
+          "Vtangential",
+          "axialForce",
+          "tangentialForce"
+        ],
+        "blade_numbers": [
+          1,
+          2,
+          3
+        ],
+        "blade_actuator_points": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+          10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+          30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+          40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+          50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+          60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+          70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+          80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
+          90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+        ]
+      },
+      "storage": {
+        "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/NBL_multitime_new.zarr",
+        "chunks": [
+          52,
+          64,
+          80
+        ]
+      },
+      "simulation": {
+        "tlims": {
+          "lower": "0",
+          "upper": "86398",
+          "n": 172797,
+          "isPeriodic": false,
+          "isDiscrete": false,
+          "timeIndexShift": {
+            "getcutout": 0,
+            "getdata": 1
+          }
+        },
+        "xlims": {
+          "lower": "0",
+          "upper": "12862.5",
+          "n": 351,
+          "isPeriodic": false,
+          "spacing": 36.75
+        },
+        "ylims": {
+          "lower": "0",
+          "upper": "1260",
+          "n": 72,
+          "isPeriodic": true,
+          "spacing": 17.5
+        },
+        "zlims": {
+          "lower": "0",
+          "upper": "2395",
+          "n": 480,
+          "isPeriodic": false,
+          "spacing": 5.0
+        }
+      },
+      "physicalVariables": [
+        {
+          "code": "velocity",
+          "name": "Velocity",
+          "isPersistent": true,
+          "offsets": [
+            {
+              "code": "velocity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "gradient",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "hessian",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            },
+            {
+              "operator": "laplacian",
+              "methods": [
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "pressure",
+          "name": "Pressure",
+          "isPersistent": true,
+          "offsets": [
+            {
+              "code": "pressure",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "gradient",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "hessian",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "temperature",
+          "name": "Temperature",
+          "isPersistent": true,
+          "offsets": [
+            {
+              "code": "temperature",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "gradient",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "hessian",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "sgsviscosity",
+          "name": "Subgrid-scale Viscosity",
+          "isPersistent": true,
+          "offsets": [
+            {
+              "code": "sgsviscosity",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none",
+                "lag4",
+                "lag6",
+                "lag8",
+                "m1q4",
+                "m2q8"
+              ]
+            },
+            {
+              "operator": "gradient",
+              "methods": [
+                "m1q4",
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint",
+                "fd4lag4"
+              ]
+            },
+            {
+              "operator": "hessian",
+              "methods": [
+                "m2q8",
+                "fd4noint",
+                "fd6noint",
+                "fd8noint"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
+        },
+        {
+          "code": "force",
+          "name": "Force",
+          "isPersistent": true,
+          "storage": {
+            "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/NBL_multitime_new.zarr",
+            "chunks": [
+              67,
+              96,
+              40
             ]
           },
           "xlims": {
