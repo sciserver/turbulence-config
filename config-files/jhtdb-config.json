@@ -3770,7 +3770,7 @@
         "xlims": {
           "lower": "147.0",
           "upper": "12678.75",
-          "n": 342,
+          "n": 351,
           "isPeriodic": false,
           "spacing": 36.75
         },
@@ -3784,7 +3784,7 @@
         "zlims": {
           "lower": "20.0",
           "upper": "2370",
-          "n": 471,
+          "n": 480,
           "isPeriodic": false,
           "spacing": 5.0
         }
@@ -4042,7 +4042,7 @@
           "xlims": {
             "lower": "7754.25",
             "upper": "10345.125",
-            "n": 142,
+            "n": 151,
             "isPeriodic": false,
             "spacing": 18.375
           },
@@ -4056,7 +4056,7 @@
           "zlims": {
             "lower": "20.0",
             "upper": "170",
-            "n": 31,
+            "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
           },
@@ -4209,7 +4209,7 @@
         "xlims": {
           "lower": "73.5",
           "upper": "22821.75",
-          "n": 1239,
+          "n": 1248,
           "isPeriodic": false,
           "spacing": 18.375
         },
@@ -4223,7 +4223,7 @@
         "zlims": {
           "lower": "20.0",
           "upper": "1970",
-          "n": 391,
+          "n": 400,
           "isPeriodic": false,
           "spacing": 5.0
         }
@@ -4481,7 +4481,7 @@
           "xlims": {
             "lower": "12357.1875",
             "upper": "20276.8125",
-            "n": 862,
+            "n": 871,
             "isPeriodic": false,
             "spacing": 9.1875
           },
@@ -4495,7 +4495,7 @@
           "zlims": {
             "lower": "20.0",
             "upper": "170",
-            "n": 31,
+            "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
           },
