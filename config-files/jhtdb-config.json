@@ -3768,8 +3768,8 @@
           }
         },
         "xlims": {
-          "lower": "147.0",
-          "upper": "12678.75",
+          "lower": "110.25",
+          "upper": "12715.5",
           "n": 351,
           "isPeriodic": false,
           "spacing": 36.75
@@ -3782,8 +3782,8 @@
           "spacing": 17.5
         },
         "zlims": {
-          "lower": "20.0",
-          "upper": "2370",
+          "lower": "0",
+          "upper": "2395",
           "n": 480,
           "isPeriodic": false,
           "spacing": 5.0
@@ -3828,7 +3828,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -3837,8 +3836,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             },
             {
@@ -3846,7 +3844,6 @@
               "methods": [
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             }
@@ -3894,7 +3891,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -3903,8 +3899,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -3951,7 +3946,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -3960,8 +3954,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -4008,7 +4001,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4017,8 +4009,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -4040,8 +4031,8 @@
             ]
           },
           "xlims": {
-            "lower": "7754.25",
-            "upper": "10345.125",
+            "lower": "7735.875",
+            "upper": "10363.5",
             "n": 151,
             "isPeriodic": false,
             "spacing": 18.375
@@ -4054,8 +4045,8 @@
             "spacing": 8.75
           },
           "zlims": {
-            "lower": "20.0",
-            "upper": "170",
+            "lower": "0",
+            "upper": "195",
             "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
@@ -4094,7 +4085,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4103,8 +4093,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             },
             {
@@ -4112,7 +4101,6 @@
               "methods": [
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             }
@@ -4207,8 +4195,8 @@
           }
         },
         "xlims": {
-          "lower": "73.5",
-          "upper": "22821.75",
+          "lower": "55.125",
+          "upper": "22840.125",
           "n": 1248,
           "isPeriodic": false,
           "spacing": 18.375
@@ -4221,8 +4209,8 @@
           "spacing": 19.6875
         },
         "zlims": {
-          "lower": "20.0",
-          "upper": "1970",
+          "lower": "0",
+          "upper": "1995",
           "n": 400,
           "isPeriodic": false,
           "spacing": 5.0
@@ -4267,7 +4255,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4276,8 +4263,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             },
             {
@@ -4285,7 +4271,6 @@
               "methods": [
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             }
@@ -4333,7 +4318,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4342,8 +4326,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -4390,7 +4373,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4399,8 +4381,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -4447,7 +4428,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4456,8 +4436,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             }
           ],
@@ -4479,8 +4458,8 @@
             ]
           },
           "xlims": {
-            "lower": "12357.1875",
-            "upper": "20276.8125",
+            "lower": "12348",
+            "upper": "20286",
             "n": 871,
             "isPeriodic": false,
             "spacing": 9.1875
@@ -4493,8 +4472,8 @@
             "spacing": 9.84375
           },
           "zlims": {
-            "lower": "20.0",
-            "upper": "170",
+            "lower": "0",
+            "upper": "195",
             "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
@@ -4533,7 +4512,6 @@
                 "m2q8",
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             },
@@ -4542,8 +4520,7 @@
               "methods": [
                 "m2q8",
                 "fd4noint",
-                "fd6noint",
-                "fd8noint"
+                "fd6noint"
               ]
             },
             {
@@ -4551,7 +4528,6 @@
               "methods": [
                 "fd4noint",
                 "fd6noint",
-                "fd8noint",
                 "fd4lag4"
               ]
             }
