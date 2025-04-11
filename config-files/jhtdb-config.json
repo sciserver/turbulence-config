@@ -4130,7 +4130,7 @@
       "description": null,
       "parquet":{
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/turbine-parquet/",
-        "time_offset": 54000.025,
+        "time_offset": 0.025,
         "time_align": 0.975,
         "time_step": 0.025,
         "turbine_variables": [
