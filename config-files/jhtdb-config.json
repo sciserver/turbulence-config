@@ -4130,9 +4130,9 @@
       "description": null,
       "parquet":{
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/turbine-parquet/",
-        "time_offset": 54000.05,
-        "time_align": 0.45,
-        "time_step": 0.05,
+        "time_offset": 54000.025,
+        "time_align": 0.95,
+        "time_step": 0.025,
         "turbine_variables": [
           "power",
           "RotSpeed",
@@ -4197,8 +4197,8 @@
       "simulation": {
         "tlims": {
           "lower": "0",
-          "upper": "86398",
-          "n": 172797,
+          "upper": "3598",
+          "n": 7197,
           "isPeriodic": false,
           "isDiscrete": false,
           "timeIndexShift": {
@@ -4208,22 +4208,22 @@
         },
         "xlims": {
           "lower": "0",
-          "upper": "12862.5",
-          "n": 351,
+          "upper": "22913.625",
+          "n": 1248,
           "isPeriodic": false,
-          "spacing": 36.75
+          "spacing": 18.375
         },
         "ylims": {
           "lower": "0",
-          "upper": "1260",
-          "n": 72,
+          "upper": "3780",
+          "n": 192,
           "isPeriodic": true,
-          "spacing": 17.5
+          "spacing": 19.6875
         },
         "zlims": {
           "lower": "0",
-          "upper": "2395",
-          "n": 480,
+          "upper": "1995",
+          "n": 400,
           "isPeriodic": false,
           "spacing": 5.0
         }
@@ -4479,18 +4479,18 @@
             ]
           },
           "xlims": {
-            "lower": "7680.75",
-            "upper": "10437",
-            "n": 151,
+            "lower": "12320.4375",
+            "upper": "20322.75",
+            "n": 871,
             "isPeriodic": false,
-            "spacing": 18.375
+            "spacing": 9.1875
           },
           "ylims": {
             "lower": "0",
-            "upper": "1260",
-            "n": 144,
+            "upper": "3780",
+            "n": 384,
             "isPeriodic": true,
-            "spacing": 8.75
+            "spacing": 9.84375
           },
           "zlims": {
             "lower": "0",
@@ -4508,7 +4508,7 @@
                 0
               ],
               "coordinate": [
-                7680.75,
+                12320.4375,
                 0,
                 0
               ]
