@@ -4031,8 +4031,8 @@
             ]
           },
           "xlims": {
-            "lower": "7735.875",
-            "upper": "10363.5",
+            "lower": "7680.75",
+            "upper": "10437",
             "n": 151,
             "isPeriodic": false,
             "spacing": 18.375
@@ -4060,7 +4060,7 @@
                 0
               ],
               "coordinate": [
-                7735.875,
+                7680.75,
                 0,
                 0
               ]
@@ -4070,38 +4070,7 @@
             {
               "operator": "field",
               "methods": [
-                "none",
-                "lag4",
-                "lag6",
-                "lag8",
-                "m1q4",
-                "m2q8"
-              ]
-            },
-            {
-              "operator": "gradient",
-              "methods": [
-                "m1q4",
-                "m2q8",
-                "fd4noint",
-                "fd6noint",
-                "fd4lag4"
-              ]
-            },
-            {
-              "operator": "hessian",
-              "methods": [
-                "m2q8",
-                "fd4noint",
-                "fd6noint"
-              ]
-            },
-            {
-              "operator": "laplacian",
-              "methods": [
-                "fd4noint",
-                "fd6noint",
-                "fd4lag4"
+                "none"
               ]
             }
           ],
@@ -4458,8 +4427,8 @@
             ]
           },
           "xlims": {
-            "lower": "12348",
-            "upper": "20286",
+            "lower": "12320.4375",
+            "upper": "20313.5625",
             "n": 871,
             "isPeriodic": false,
             "spacing": 9.1875
@@ -4497,38 +4466,7 @@
             {
               "operator": "field",
               "methods": [
-                "none",
-                "lag4",
-                "lag6",
-                "lag8",
-                "m1q4",
-                "m2q8"
-              ]
-            },
-            {
-              "operator": "gradient",
-              "methods": [
-                "m1q4",
-                "m2q8",
-                "fd4noint",
-                "fd6noint",
-                "fd4lag4"
-              ]
-            },
-            {
-              "operator": "hessian",
-              "methods": [
-                "m2q8",
-                "fd4noint",
-                "fd6noint"
-              ]
-            },
-            {
-              "operator": "laplacian",
-              "methods": [
-                "fd4noint",
-                "fd6noint",
-                "fd4lag4"
+                "none"
               ]
             }
           ],
