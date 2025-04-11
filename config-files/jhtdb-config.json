@@ -3768,9 +3768,9 @@
           }
         },
         "xlims": {
-          "lower": "0",
-          "upper": "12862.5",
-          "n": 351,
+          "lower": "147.0",
+          "upper": "12678.75",
+          "n": 342,
           "isPeriodic": false,
           "spacing": 36.75
         },
@@ -3782,9 +3782,9 @@
           "spacing": 17.5
         },
         "zlims": {
-          "lower": "0",
-          "upper": "2395",
-          "n": 480,
+          "lower": "20.0",
+          "upper": "2370",
+          "n": 471,
           "isPeriodic": false,
           "spacing": 5.0
         }
@@ -4040,9 +4040,9 @@
             ]
           },
           "xlims": {
-            "lower": "7680.75",
-            "upper": "10437",
-            "n": 151,
+            "lower": "7754.25",
+            "upper": "10345.125",
+            "n": 142,
             "isPeriodic": false,
             "spacing": 18.375
           },
@@ -4054,9 +4054,9 @@
             "spacing": 8.75
           },
           "zlims": {
-            "lower": "0",
-            "upper": "195",
-            "n": 40,
+            "lower": "20.0",
+            "upper": "170",
+            "n": 31,
             "isPeriodic": false,
             "spacing": 5.0
           },
@@ -4207,9 +4207,9 @@
           }
         },
         "xlims": {
-          "lower": "0",
-          "upper": "22913.625",
-          "n": 1248,
+          "lower": "73.5",
+          "upper": "22821.75",
+          "n": 1239,
           "isPeriodic": false,
           "spacing": 18.375
         },
@@ -4221,9 +4221,9 @@
           "spacing": 19.6875
         },
         "zlims": {
-          "lower": "0",
-          "upper": "1995",
-          "n": 400,
+          "lower": "20.0",
+          "upper": "1970",
+          "n": 391,
           "isPeriodic": false,
           "spacing": 5.0
         }
@@ -4479,9 +4479,9 @@
             ]
           },
           "xlims": {
-            "lower": "12320.4375",
-            "upper": "20322.75",
-            "n": 871,
+            "lower": "12357.1875",
+            "upper": "20276.8125",
+            "n": 862,
             "isPeriodic": false,
             "spacing": 9.1875
           },
@@ -4493,9 +4493,9 @@
             "spacing": 9.84375
           },
           "zlims": {
-            "lower": "0",
-            "upper": "195",
-            "n": 40,
+            "lower": "20.0",
+            "upper": "170",
+            "n": 31,
             "isPeriodic": false,
             "spacing": 5.0
           },
