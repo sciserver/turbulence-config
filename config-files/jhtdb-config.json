@@ -3768,8 +3768,8 @@
           }
         },
         "xlims": {
-          "lower": "110.25",
-          "upper": "12715.5",
+          "lower": "0",
+          "upper": "12862.5",
           "n": 351,
           "isPeriodic": false,
           "spacing": 36.75
@@ -4164,8 +4164,8 @@
           }
         },
         "xlims": {
-          "lower": "55.125",
-          "upper": "22840.125",
+          "lower": "0",
+          "upper": "22913.625",
           "n": 1248,
           "isPeriodic": false,
           "spacing": 18.375
