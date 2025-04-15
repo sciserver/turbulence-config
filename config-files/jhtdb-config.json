@@ -4121,6 +4121,67 @@
             "none",
             "pchip"
           ]
+        },
+        {
+          "code": "soiltemperature",
+          "name": "Soil Temperature",
+          "isPersistent": true,
+          "storage": {
+            "filepath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/diurnal_cycle_multitime_new.zarr",
+            "chunks": [
+              117,
+              72,
+              31
+            ]
+          },
+          "xlims": {
+            "lower": "0",
+            "upper": "12862.5",
+            "n": 351,
+            "isPeriodic": false,
+            "spacing": 36.75
+          },
+          "ylims": {
+            "lower": "0",
+            "upper": "1260",
+            "n": 72,
+            "isPeriodic": true,
+            "spacing": 17.5
+          },
+          "zlims": {
+            "lower": "0",
+            "upper": "1.4182578827986189",
+            "n": 31,
+            "isPeriodic": false,
+            "spacing": "irregular diurnal windfarm dz"
+          },
+          "offsets": [
+            {
+              "code": "soiltemperature",
+              "grid": [
+                0,
+                0,
+                0
+              ],
+              "coordinate": [
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "spatialOperatorMethods": [
+            {
+              "operator": "field",
+              "methods": [
+                "none"
+              ]
+            }
+          ],
+          "temporalMethods": [
+            "none",
+            "pchip"
+          ]
         }
       ]
     },
