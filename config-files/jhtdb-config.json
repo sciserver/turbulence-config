@@ -4150,7 +4150,7 @@
           },
           "zlims": {
             "lower": "0",
-            "upper": "1.4182578827986189",
+            "upper": "1.41826",
             "n": 31,
             "isPeriodic": false,
             "spacing": "irregular diurnal windfarm dz"
