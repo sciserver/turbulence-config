@@ -4149,8 +4149,8 @@
             "spacing": 17.5
           },
           "zlims": {
-            "lower": "0",
-            "upper": "1.41826",
+            "lower": "-1.41826",
+            "upper": "0",
             "n": 31,
             "isPeriodic": false,
             "spacing": "irregular diurnal windfarm dz"
@@ -4166,7 +4166,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                -1.41826
               ]
             }
           ],
