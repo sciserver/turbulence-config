@@ -3782,8 +3782,8 @@
           "spacing": 17.5
         },
         "zlims": {
-          "lower": "0",
-          "upper": "2395",
+          "lower": "2.5",
+          "upper": "2397.5",
           "n": 480,
           "isPeriodic": false,
           "spacing": 5.0
@@ -3805,7 +3805,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -3871,7 +3871,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -3928,7 +3928,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -3985,7 +3985,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4054,8 +4054,8 @@
             "spacing": 8.75
           },
           "zlims": {
-            "lower": "0",
-            "upper": "195",
+            "lower": "2.5",
+            "upper": "197.5",
             "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
@@ -4071,7 +4071,7 @@
               "coordinate": [
                 7680.75,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4282,8 +4282,8 @@
           "spacing": 19.6875
         },
         "zlims": {
-          "lower": "0",
-          "upper": "1995",
+          "lower": "2.5",
+          "upper": "1997.5",
           "n": 400,
           "isPeriodic": false,
           "spacing": 5.0
@@ -4305,7 +4305,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4371,7 +4371,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4428,7 +4428,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4485,7 +4485,7 @@
               "coordinate": [
                 0,
                 0,
-                0
+                2.5
               ]
             }
           ],
@@ -4554,8 +4554,8 @@
             "spacing": 9.84375
           },
           "zlims": {
-            "lower": "0",
-            "upper": "195",
+            "lower": "2.5",
+            "upper": "197.5",
             "n": 40,
             "isPeriodic": false,
             "spacing": 5.0
@@ -4571,7 +4571,7 @@
               "coordinate": [
                 12320.4375,
                 0,
-                0
+                2.5
               ]
             }
           ],
