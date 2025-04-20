@@ -262,11 +262,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -329,11 +324,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -387,11 +377,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -469,11 +454,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -535,11 +515,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -641,11 +616,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -708,11 +678,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -766,11 +731,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -799,11 +759,6 @@
           "offsets": [
             {
               "code": "force",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -880,11 +835,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -947,11 +897,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1005,11 +950,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1038,11 +978,6 @@
           "offsets": [
             {
               "code": "force",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1119,11 +1054,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1234,11 +1164,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1299,11 +1224,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1404,11 +1324,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1469,11 +1384,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1574,11 +1484,6 @@
           "offsets": [
             {
               "code": "velocity_uv",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1587,11 +1492,6 @@
             },
             {
               "code": "velocity_w",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1651,11 +1551,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1706,11 +1601,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1761,11 +1651,6 @@
           "offsets": [
             {
               "code": "sgsenergy",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1865,11 +1750,6 @@
           "offsets": [
             {
               "code": "velocity_uv",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1878,11 +1758,6 @@
             },
             {
               "code": "velocity_w",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1943,11 +1818,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -1999,11 +1869,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2055,11 +1920,6 @@
           "offsets": [
             {
               "code": "sgsenergy",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2160,11 +2020,6 @@
           "offsets": [
             {
               "code": "velocity_uv",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2173,11 +2028,6 @@
             },
             {
               "code": "velocity_w",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2237,11 +2087,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2292,11 +2137,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2347,11 +2187,6 @@
           "offsets": [
             {
               "code": "sgsenergy",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2451,11 +2286,6 @@
           "offsets": [
             {
               "code": "velocity_uv",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2464,11 +2294,6 @@
             },
             {
               "code": "velocity_w",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2529,11 +2354,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2585,11 +2405,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                -0.5
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2641,11 +2456,6 @@
           "offsets": [
             {
               "code": "sgsenergy",
-              "grid": [
-                0,
-                0,
-                -1.0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2746,11 +2556,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2813,11 +2618,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2871,11 +2671,6 @@
           "offsets": [
             {
               "code": "magneticfield",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -2938,11 +2733,6 @@
           "offsets": [
             {
               "code": "vectorpotential",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3005,11 +2795,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3038,11 +2823,6 @@
           "offsets": [
             {
               "code": "force",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3119,11 +2899,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3186,11 +2961,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3244,11 +3014,6 @@
           "offsets": [
             {
               "code": "density",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3302,11 +3067,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3384,11 +3144,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3450,11 +3205,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3556,11 +3306,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 30.2185,
                 0,
@@ -3610,11 +3355,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 30.2185,
                 0,
@@ -3657,11 +3397,6 @@
           "offsets": [
             {
               "code": "position",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 30.2185,
                 0,
@@ -3797,11 +3532,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3863,11 +3593,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3920,11 +3645,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -3977,11 +3697,6 @@
           "offsets": [
             {
               "code": "sgsviscosity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4063,11 +3778,6 @@
           "offsets": [
             {
               "code": "force",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 7680.75,
                 0,
@@ -4158,11 +3868,6 @@
           "offsets": [
             {
               "code": "soiltemperature",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4297,11 +4002,6 @@
           "offsets": [
             {
               "code": "velocity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4363,11 +4063,6 @@
           "offsets": [
             {
               "code": "pressure",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4420,11 +4115,6 @@
           "offsets": [
             {
               "code": "temperature",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4477,11 +4167,6 @@
           "offsets": [
             {
               "code": "sgsviscosity",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 0,
                 0,
@@ -4563,11 +4248,6 @@
           "offsets": [
             {
               "code": "force",
-              "grid": [
-                0,
-                0,
-                0
-              ],
               "coordinate": [
                 12320.4375,
                 0,
