@@ -207,6 +207,16 @@
       "description": null
     }
   ],
+  "giverny_constants": {
+    "maximum_processes": 256,
+    "missing_value_placeholder": -999.9,
+    "bytes_per_datapoint": 4,
+    "max_cutout_size": 16.0,
+    "max_data_points": 2000000,
+    "decimals": 7,
+    "pyJHTDB_testing_token": "edu.jhu.pha.turbulence.testing-201406",
+    "turbulence_email_address": "turbulence@lists.johnshopkins.edu"
+  },
   "datasets": [
     {
       "code": "channel",
@@ -3422,7 +3432,7 @@
       "code": "diurnal_windfarm",
       "name": "Diurnal Windfarm",
       "description": null,
-      "parquet":{
+      "parquet": {
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/diurnal_cycle_new/turbine-parquet/",
         "time_offset": 54000.05,
         "time_align": 0.95,
@@ -3894,7 +3904,7 @@
       "code": "nbl_windfarm",
       "name": "Neutral Boundary Layer Windfarm",
       "description": null,
-      "parquet":{
+      "parquet": {
         "folderpath": "/home/idies/workspace/turbulence-ceph-staging/sciserver-windfarm/windfarm/NBL_new/turbine-parquet/",
         "time_offset": 0.025,
         "time_align": 0.975,
