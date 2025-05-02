@@ -3838,8 +3838,7 @@
             }
           ],
           "temporalMethods": [
-            "none",
-            "pchip"
+            "none"
           ]
         },
         {
@@ -4308,8 +4307,7 @@
             }
           ],
           "temporalMethods": [
-            "none",
-            "pchip"
+            "none"
           ]
         }
       ]
