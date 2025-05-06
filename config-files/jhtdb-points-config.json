@@ -339,6 +339,48 @@
         "endTime": 2.0,
         "deltaT": 0.1
       }
+    },
+    {
+      "datasetName": "diurnal_windfarm",
+      "default_coordinates": [
+        {
+          "coordinate": "t",
+          "value": 1.0
+        },
+        {
+          "coordinate": "x",
+          "value": 7735.875
+        },
+        {
+          "coordinate": "y",
+          "value": 700.0
+        },
+        {
+          "coordinate": "z",
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "datasetName": "nbl_windfarm",
+      "default_coordinates": [
+        {
+          "coordinate": "t",
+          "value": 1.0
+        },
+        {
+          "coordinate": "x",
+          "value": 15000.0
+        },
+        {
+          "coordinate": "y",
+          "value": 2000.0
+        },
+        {
+          "coordinate": "z",
+          "value": 100.0
+        }
+      ]
     }
   ]
 }
