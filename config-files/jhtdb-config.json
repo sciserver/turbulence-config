@@ -213,6 +213,7 @@
     "bytes_per_datapoint": 4,
     "max_cutout_size": 16.0,
     "max_data_points": 2000000,
+    "max_num_chunks": 262144,
     "decimals": 7,
     "pyJHTDB_testing_token": "edu.jhu.pha.turbulence.testing-201406",
     "turbulence_email_address": "turbulence@lists.johnshopkins.edu"
