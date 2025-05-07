@@ -349,15 +349,15 @@
         },
         {
           "coordinate": "x",
-          "value": 7735.875
+          "value": 10000.0
         },
         {
           "coordinate": "y",
-          "value": 700.0
+          "value": 1000.0
         },
         {
           "coordinate": "z",
-          "value": 100.0
+          "value": 90.0
         }
       ]
     },
@@ -370,15 +370,15 @@
         },
         {
           "coordinate": "x",
-          "value": 15000.0
+          "value": 10000.0
         },
         {
           "coordinate": "y",
-          "value": 2000.0
+          "value": 1000.0
         },
         {
           "coordinate": "z",
-          "value": 100.0
+          "value": 90.0
         }
       ]
     }
