@@ -341,7 +341,7 @@
       }
     },
     {
-      "datasetName": "diurnal_windfarm",
+      "datasetName": "nbl_windfarm",
       "default_coordinates": [
         {
           "coordinate": "t",
@@ -362,7 +362,7 @@
       ]
     },
     {
-      "datasetName": "nbl_windfarm",
+      "datasetName": "diurnal_windfarm",
       "default_coordinates": [
         {
           "coordinate": "t",
